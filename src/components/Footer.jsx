@@ -1,10 +1,15 @@
+import Logo from '../assets/images/logo-blue-with-white-letters.png';
+import EXR from '../assets/images/exr.png';
+import SafeHousing from '../assets/images/equal-housing-opportunity.png';
+
+
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="inner">
                 <div className="footer-content">
-                    <div className="logo_wrap">
-                        <img className="logo" src="./assets/Images/logo-blue-with-white-letters.png" alt="logo" />
+                    <div className="logo-wrap">
+                        <img className="logo" src={Logo} alt="logo" />
                     </div>
                     <div className="content">
                         <div className="location">
@@ -25,10 +30,10 @@ const Footer = () => {
                     </div>
                     <div className="logos">
                         <div className="logo-wrap exr">
-                            <img src="./assets/Images/exr.png" alt="exr logo" />
+                            <img src={EXR} alt="exr logo" />
                         </div>
                         <div className="logo-wrap safe-housing">
-                            <img src="./assets/Images/equal-housing-opportunity.png" alt="" />
+                            <img src={SafeHousing} alt="Safe-housing logo" />
                         </div>
                     </div>
                 </div>
@@ -37,8 +42,8 @@ const Footer = () => {
                         <p> ©Copyright 2024 EXR. All rights reserved. Website by OnelineWeb. </p>
                     </div>
                     <ul className="extra-links">
-                        <li> <a href="#"> Fair Housing Statement </a> </li>
-                        <li> <a href="#"> Accessibility </a> </li>
+                        <li className="link"> <a href="#"> Fair Housing Statement </a> </li>
+                        <li className="link"> <a href="#"> Accessibility </a> </li>
                     </ul>
                 </div>
             </div>
