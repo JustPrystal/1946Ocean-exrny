@@ -4,10 +4,11 @@ const Hero = ({data}) => {
         <div className="hero">
             <img src={backgroundImage} alt="" className="background-image" />
             <div className="inner">
-                <div className="content">
+
+                {(heading || description) && <div className="content">
                     <h1 className="heading">{heading}</h1>
                     <p className="description">{description}</p>
-                </div>
+                </div>}
             </div>
         </div>
     );
