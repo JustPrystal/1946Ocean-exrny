@@ -1,9 +1,14 @@
 const Hero = ({data}) => {
     const {backgroundImage, heading, description} = data;
-    console.log(backgroundImage)
     return (  
         <div className="hero">
             <img src={backgroundImage} alt="" className="background-image" />
+            <div className="inner">
+                <div className="content">
+                    <h1 className="heading">{heading}</h1>
+                    <p className="description">{description}</p>
+                </div>
+            </div>
         </div>
     );
 }
