@@ -5,7 +5,7 @@ import RightArrow from '../assets/images/right.svg';
 const QuickNav = () => {
     return ( 
         <section class="quick-navigation">
-            <div class="container">
+            <div class="inner">
                 <div class="prev-page">
                     <img src={LeftArrow} alt="leftarrow" />
                     <p> Amenities </p>

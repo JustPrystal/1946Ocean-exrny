@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import bannerImage from '../assets/images/home/banner.jpg';
 import unitDetailsImage from '../assets/images/home/unit-details-image.png';
 import amenitiesImage from '../assets/images/home/amenities-image.png';
+import QuickNav from '../components/QuickNav';
 import Footer from '../components/Footer';
 import TwoColumn from '../components/TwoColumn';
 
@@ -66,6 +67,7 @@ const Home = () => {
                     return <TwoColumn key={index} data={section} />;
                 })
             }
+            <QuickNav />
             <Footer />
         </>
      );
