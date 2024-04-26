@@ -1,0 +1,68 @@
+.hero{
+    overflow-x: hidden;
+    .background-image{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+        @media(max-width:1370px){
+            height: 100vh;
+            object-fit: cover;
+            left: 50%;
+            transform: translateX(-50%);
+            @include responsive(md){
+                height: 70vh;
+            }
+        }        
+    }
+    .inner{
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 250px 100px 0px;
+        display: flex;
+        justify-content: center;
+        @include responsive(lg){
+            padding: 200px 100px 0px;
+        }
+        @include responsive(md){
+            padding: 80px 80px;
+        }
+        @include responsive(sm){
+            padding: 100px 20px;
+        }
+        @include responsive(xs){
+            padding: 60px 20px;
+        }
+        .content{
+            text-align: center;
+            color: #fff;
+            max-width: 900px;
+            .heading{
+                font-family: 'Bentago';
+                font-size: 87px;
+                line-height: 1.3em;
+                margin-bottom: 20px;
+                font-weight: 500;
+                @include responsive(md){
+                    font-size: 70px;
+                }
+                @include responsive(sm){
+                    font-size: 48px;
+                }
+            }
+            .description{
+                color: #fff;
+                font-size: 18px;
+                font-family: 'Charlevoix Pro';
+                line-height: 1.8em;
+                font-weight: lighter;
+                @include responsive(md){
+                    font-size: 16px;
+                }
+                @include responsive(sm){
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

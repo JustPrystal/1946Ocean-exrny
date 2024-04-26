@@ -60,6 +60,7 @@ let TwoColumnData = [
 const Home = () => {
     return ( 
         <>
+        {/* <img src={BannerImage} alt="" className="background-image" /> */}
             <Header />
             <Hero data={heroData} />
             {
