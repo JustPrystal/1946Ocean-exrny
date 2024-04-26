@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import BannerImage from '../assets/images/home/banner.jpg';
+import Footer from '../components/Footer';
 
 let heroData = {
     backgroundImage : BannerImage,
@@ -13,6 +14,7 @@ const Home = () => {
         <>
             <Header />
             <Hero data={heroData} />
+            <Footer />
         </>
      );
 }
