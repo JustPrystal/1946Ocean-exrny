@@ -83,7 +83,7 @@ header{
                 padding: 20px 30px;
             }
         }
-        .menu-wrap{
+        .menu-button{
             display: none;
             @include responsive(lg){
                 display: flex;
@@ -91,7 +91,7 @@ header{
                 justify-content: space-between;
                 position: relative;
                 z-index: 99;
-                svg{
+                img{
                     width: 28px;
                 }
                 .cross{
