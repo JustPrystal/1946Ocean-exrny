@@ -1,7 +1,9 @@
 .hero{
     overflow-x: hidden;
+    background-image: linear-gradient(360deg, #5E7584 0%, #F4E9D70D 24%);
+
     .background-image{
-        position: absolute;
+        position: fixed;
         top: 0;
         width: 100%;
         z-index: -1;
@@ -13,25 +15,25 @@
             @include responsive(md){
                 height: 70vh;
             }
+            @include responsive(sm){
+                height: 50vh;
+            }
         }        
     }
     .inner{
         max-width: 1440px;
         margin: 0 auto;
-        padding: 250px 100px 0px;
+        padding: 250px 100px 230px 100px;
         display: flex;
         justify-content: center;
-        @include responsive(lg){
-            padding: 200px 100px 0px;
-        }
         @include responsive(md){
-            padding: 80px 80px;
+            padding: 100px 80px 80px 80px;
         }
         @include responsive(sm){
-            padding: 100px 20px;
+            padding: 100px 20px 80px 20px;
         }
         @include responsive(xs){
-            padding: 60px 20px;
+            padding: 60px 20px 40px 20px;
         }
         .content{
             text-align: center;
@@ -58,9 +60,6 @@
                 font-weight: lighter;
                 @include responsive(md){
                     font-size: 16px;
-                }
-                @include responsive(sm){
-                    font-size: 14px;
                 }
             }
         }
