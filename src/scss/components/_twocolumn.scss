@@ -1,0 +1,47 @@
+.inner{
+    max-Width:1440px;
+    margin: 0 auto;
+    padding: 200px 0px;
+    gap: 50px;
+
+    .image-wrap{
+        width: 50%;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }   
+    .content-wrap{
+        width: 40%;
+
+        .heading{
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-family: 'Charlevoix Pro';
+        }
+        .sub-heading{
+            font-size: 87px;
+            font-family: 'Bentago';
+            line-height: 100%;
+            margin-bottom: 40px;
+        }
+        .description{
+            P{
+                font-size: 18px;
+                font-family: 'Charlevoix Pro';
+                margin-bottom: 20px;
+
+                &:last-child{
+                    margin: 0;
+                }
+            }
+        }
+        .logo{
+            display: none;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
