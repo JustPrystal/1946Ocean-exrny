@@ -17,7 +17,9 @@ const Header = () => {
           <a href="#" className="link">Contact</a>
         </div>
         <div className="logo-wrap">
-          <img className="logo" src={headerLogo} alt=""/>
+          <a href="#">
+            <img className="logo" src={headerLogo} alt=""/>
+          </a>
         </div>
         <div className="schedule-button">
           <a href="#">Schedule A Tour</a>
