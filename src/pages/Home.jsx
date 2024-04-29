@@ -3,9 +3,11 @@ import Hero from '../components/Hero';
 import bannerImage from '../assets/images/home/banner.jpg';
 import unitDetailsImage from '../assets/images/home/unit-details-image.png';
 import amenitiesImage from '../assets/images/home/amenities-image.png';
+import neighboehoodImage from '../assets/images/home/img-5-with-border-2.png';
+import TwoColumn from '../components/TwoColumn';
 import QuickNav from '../components/QuickNav';
 import Footer from '../components/Footer';
-import TwoColumn from '../components/TwoColumn';
+
 
 let heroData = {
     backgroundImage : bannerImage,
@@ -24,7 +26,7 @@ let TwoColumnData = [
             <p>Experience a harmonious blend of style and functionality at Ocean 1946.</p>`,
         image : unitDetailsImage,
         flexDirection : "row",
-        logo : false
+        logo : false,
     },
     {
         variant : "white",
@@ -33,9 +35,17 @@ let TwoColumnData = [
         description : `<p>Stay active and energized in our state-of-the-art fitness center, then unwind and socialize in the elegant lounge or gather with friends in the chef’s kitchen for culinary adventures. Need to catch up on work? Our business center provides a productive environment, while the package room ensures convenient deliveries. Relax in the stylish lobby or utilize our efficient mailroom services. With parking available for your convenience, Ocean 1946 offers the ultimate in modern living, where every detail is designed to enhance your lifestyle.</p>`,
         image : amenitiesImage,
         flexDirection : "row-reverse",
-        logo : false
+        logo : false,
     },
-
+    {
+        variant : "cream",
+        heading : "Neighborhood",
+        subheading : "In the heart <span>of Brooklyn<span/>",
+        description : `<p>Experience the convenience of Ocean 1946’s prime location, surrounded by a wealth of amenities and attractions. From the tranquility of Brooklyn Marine Park to the academic hub of Brooklyn College, and the nearby New York Community Hospital, everything you need is within reach. Enjoy a diverse culinary scene, shopping options, and easy access to public transportation, including the express bus and the B and Q train on Kings Highway. Dive into the vibrant neighborhood surrounding Ocean 1946, where urban convenience meets luxury living.</p>`,
+        image : neighboehoodImage,
+        flexDirection : "row",
+        logo : true,
+    },
 ]
 
 const Home = () => {

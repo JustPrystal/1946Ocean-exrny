@@ -1,3 +1,5 @@
+import logoImage from '../assets/images/home/1964-white.png';
+
 const TwoColumn = ({data}) => {
     const {variant, heading, subheading, description, image, flexDirection, logo} = data;
     return (  
@@ -23,9 +25,9 @@ const TwoColumn = ({data}) => {
                         <div className="heading"> {heading} </div>
                         <div className="sub-heading" dangerouslySetInnerHTML={{ __html: subheading }} />
                         <div className="description" dangerouslySetInnerHTML={{ __html: description }} />
-                        <div className="logo" >
-                            <img src={logo} alt="logo" />
-                        </div>
+                        {(logo) && <div className="logo">
+                            <img src={logoImage} alt="logo" />
+                        </div>}
 
                     </div>
 
