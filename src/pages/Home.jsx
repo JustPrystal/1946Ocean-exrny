@@ -15,52 +15,32 @@ let heroData = {
 
 let TwoColumnData = [
     {
-        backgroundColor : "#5e7584",
-        heading : {
-            text : "Unit Details",
-            color : "#FFFFFF"
-        },
-        subheading : {
-            text : "Exceptional <span>Design<span/>",
-            color : "#FFFFFF",
-            secondaryColor : "#f4e9d7"
-        },
-        description : {
-            text : `<p>Welcome to Ocean 1946, where contemporary elegance meets modern convenience.</p>
+        variant : "blue",
+        heading : "Unit Details",
+        subheading : "Exceptional <span>Design<span/>",
+        description : `<p>Welcome to Ocean 1946, where contemporary elegance meets modern convenience.</p>
             <p>Featuring Marvin windows on one side and floor-to-ceiling windows on the other, each residence is bathed in natural light, illuminating the white oak hardwood floors and light-colored interiors. Stainless steel appliances, quartz countertops, and open-concept kitchens make cooking a joy, while washer dryers in every unit add convenience to daily life.</p>
             <p>With HVAC temperature control ensuring comfort year-round, and marble bathrooms with showers in the master tub, luxury abounds in every detail. Black finishes add a touch of sophistication, while floors 3-6 boast balconies and the 6th floor offers expansive porches for outdoor relaxation.</p>
             <p>Experience a harmonious blend of style and functionality at Ocean 1946.</p>`,
-            color : "#FFFFFF"
-        },
         image : unitDetailsImage,
         flexDirection : "row",
         logo : false
     },
     {
-        backgroundColor : "#ffffff",
-        heading : {
-            text : "Amenities",
-            color : "#000000"
-        },
-        subheading : {
-            text : "Opulent <span>Amenities<span/>",
-            color : "#8e591b",
-            secondaryColor : "#5e7584"
-        },
-        description : {
-            text : `<p>Stay active and energized in our state-of-the-art fitness center, then unwind and socialize in the elegant lounge or gather with friends in the chef’s kitchen for culinary adventures. Need to catch up on work? Our business center provides a productive environment, while the package room ensures convenient deliveries. Relax in the stylish lobby or utilize our efficient mailroom services. With parking available for your convenience, Ocean 1946 offers the ultimate in modern living, where every detail is designed to enhance your lifestyle.</p>`,
-            color : "#000000"
-        },
+        variant : "white",
+        heading : "Amenities",
+        subheading : "Opulent <span>Amenities<span/>",
+        description : `<p>Stay active and energized in our state-of-the-art fitness center, then unwind and socialize in the elegant lounge or gather with friends in the chef’s kitchen for culinary adventures. Need to catch up on work? Our business center provides a productive environment, while the package room ensures convenient deliveries. Relax in the stylish lobby or utilize our efficient mailroom services. With parking available for your convenience, Ocean 1946 offers the ultimate in modern living, where every detail is designed to enhance your lifestyle.</p>`,
         image : amenitiesImage,
         flexDirection : "row-reverse",
         logo : false
-    }
+    },
+
 ]
 
 const Home = () => {
     return ( 
         <>
-        {/* <img src={BannerImage} alt="" className="background-image" /> */}
             <Header />
             <Hero data={heroData} />
             {

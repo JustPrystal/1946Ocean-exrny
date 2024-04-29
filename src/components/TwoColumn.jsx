@@ -1,10 +1,8 @@
 const TwoColumn = ({data}) => {
-    const {backgroundColor, heading, subheading, description, image, flexDirection, logo} = data;
+    const {variant, heading, subheading, description, image, flexDirection, logo} = data;
     return (  
         <>
-            <section className={"two-column " + heading.text} style= {{
-                    background:backgroundColor,
-                }} >
+            <section className={"two-column " + variant}>
                 <div className="inner" style= {{
                         display:"flex",
                         flexDirection:flexDirection,
@@ -22,9 +20,9 @@ const TwoColumn = ({data}) => {
                             flexDirection:"column",
                         }} >
 
-                        <div className="heading" style={{color:heading.color,}}> {heading.text} </div>
-                        <div className="sub-heading" style={{color:subheading.color,   span:{color:subheading.secondaryColor,}}} dangerouslySetInnerHTML={{ __html: subheading.text }} />
-                        <div className="description" style={{color:description.color}} dangerouslySetInnerHTML={{ __html: description.text }} />
+                        <div className="heading"> {heading} </div>
+                        <div className="sub-heading" dangerouslySetInnerHTML={{ __html: subheading }} />
+                        <div className="description" dangerouslySetInnerHTML={{ __html: description }} />
                         <div className="logo" >
                             <img src={logo} alt="logo" />
                         </div>
