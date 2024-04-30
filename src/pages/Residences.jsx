@@ -15,6 +15,7 @@ import slider3image2 from "../assets/images/residences/3 Bedroom/1946-Ocean-plan
 import slider3image3 from "../assets/images/residences/3 Bedroom/img-2.png";
 
 import Hero from "../components/Hero";
+import TwoColumnSlider from "../components/TwoColumnSlider";
 
 let heroData = {
     backgroundImage : bannerImage,
@@ -57,6 +58,11 @@ const Residences = () => {
             <Header />
             <Hero data={heroData}/>
             <BannerContent data={bannerContentData} />
+            {
+                residenceData.map((section, index) => {
+                    return <TwoColumnSlider key={index} data={section} />;
+                })
+            }
         </>
      );
 }
