@@ -2,13 +2,8 @@
     background-color: #5e7584;
     padding: 0 40px;
 
-<<<<<<< HEAD
     @include responsive(sm){
         padding: 0 20px;
-=======
-    @media(max-width: 767px){
-        padding: 0 10px;
->>>>>>> 0ff61e62eb0c314a448a970f61ad724c4336e393
     }
 
     .inner{
@@ -51,14 +46,7 @@
             text-align: center;
             margin-top: 20px;
             width: 80%;
-<<<<<<< HEAD
-
             @include responsive(md){
-=======
-            
-            @media(max-width: 991px){
-                width: 100%;
->>>>>>> 0ff61e62eb0c314a448a970f61ad724c4336e393
                 font-size: 16px;
             }
         }  
