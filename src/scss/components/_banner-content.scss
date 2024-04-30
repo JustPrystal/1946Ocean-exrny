@@ -2,7 +2,7 @@
     background-color: #5e7584;
     padding: 0 40px;
 
-    @media(max-width: 767px){
+    @include responsive(sm){
         padding: 0 20px;
     }
 
@@ -23,19 +23,19 @@
             font-weight: 500;
             line-height: 100%;
 
-            @media(max-width: 1440px){
+            @include responsive(xl){
                 font-size: 78px;
             }
-            @media(max-width: 1250px){
+            @include responsive(lg){
                 font-size: 72px;
             }
-            @media(max-width: 991px){
+            @include responsive(md){
                 font-size: 65px;
             }
-            @media(max-width: 767px){
+            @include responsive(sm){
                 font-size: 55px;
             }
-            @media(max-width:567px){
+            @include responsive(xs){
                 font-size: 48px;
             }
         }
@@ -47,7 +47,7 @@
             margin-top: 20px;
             width: 80%;
 
-            @media(max-width: 854px){
+            @include responsive(md){
                 font-size: 16px;
             }
         }  

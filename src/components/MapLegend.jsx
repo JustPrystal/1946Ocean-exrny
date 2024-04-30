@@ -3,12 +3,28 @@ const MapLegend = ({data}) => {
     return ( 
         <section className="maplegend">
             <div className="inner">
-                <div className="content-wrap">
-                    <div className="heading"><h2> {heading} </h2></div>
-                    <div className="content">
+                {
+                    data.map((legendItem, index) => {
+                        return(
+                            <div className="content-wrap" key={index}>
 
-                    </div>
-                </div>
+                                <div className="heading"> <h2>{legendItem.heading}</h2> </div>
+                                <div className="content"> 
+                                    {
+                                        legendItem.list.map((listItem, itemIndex)=>{
+                                            return (
+                                                <p className="list-item">
+                                                    {listItem}
+                                                </p>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+                
             </div>
         </section>
     );

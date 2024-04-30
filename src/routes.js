@@ -4,6 +4,7 @@ import ErrorPage from "./pages/Error";
 import Contact from "./pages/Contact";
 import Residences from "./pages/Residences";
 import Availabilities from "./pages/Availabilities";
+import Neighborhood from "./pages/Neighborhood";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     {
         path: "/availabilities",
         element: <Availabilities />,
+    },
+    {
+        path: "/neighborhood",
+        element: <Neighborhood />,
     },
 ])
 

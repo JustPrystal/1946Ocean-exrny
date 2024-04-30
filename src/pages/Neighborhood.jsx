@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import bannerImage from "../assets/images/Neighborhood/brooklyn-new-york-usa-cityscape-over-brooklyn-heights.jpg";
 import MapLegend from '../components/MapLegend';
 import QuickNav from '../components/QuickNav';
 import Footer from '../components/Footer';
@@ -7,8 +8,8 @@ import Footer from '../components/Footer';
 
 let heroData = {
     backgroundImage : bannerImage,
-    heading : "Your Urban Oasis",
-    description: "Nestled within the vibrant neighborhood of Midwood, Brooklyn, 1946 Ocean Avenue epitomizes luxury living at its finest. These opulent apartments offer a seamless blend of modern elegance and urban convenience, presenting an unparalleled opportunity for those seeking Brooklyn, New York apartments available for rent."
+    heading : "",
+    description: "",
 }
 
 let MaplegendData = [
@@ -24,7 +25,7 @@ let MaplegendData = [
         ]
     },
     {
-        heading : "Points of Interest",
+        heading : "Transportation",
         list : [
             "Express bus to the city",
             "B & Q train",
@@ -37,7 +38,7 @@ const Neighborhood = () => {
         <>
             <Header />
             <Hero data={heroData} />
-            <MapLegend />
+            <MapLegend data={MaplegendData} />
             <QuickNav />
             <Footer />
         </>

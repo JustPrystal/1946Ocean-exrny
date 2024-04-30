@@ -1,0 +1,82 @@
+.maplegend{
+    background-color: #5e7584;
+    padding: 72px 40px;
+
+    @include responsive(md){
+        padding: 72px 20px;                       
+    }
+
+    .inner{
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 50px;
+
+        @include responsive(md){
+            gap: 20px;                       
+        }
+        @include responsive(sm){
+            flex-direction: column;
+        }
+
+        .content-wrap{
+            background-color: #f4e9d7;
+            padding: 35px;
+            width: 50%;
+            text-align: center;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            // margin-bottom: auto;
+
+            @include responsive(md){
+                padding: 35px 20px;                    
+            }
+            @include responsive(sm){
+                width: 100%;
+                border-radius: 30px;
+                padding: 20px;
+            }
+
+            .heading{
+                margin-bottom: 40px;
+                h2{
+                    color: #996936;
+                    font-size: 59px;
+                    font-weight: 600;
+                    font-family: 'Bentago';
+
+                    @include responsive(lg){
+                        font-size: 44px;
+                    }
+                    @include responsive(md){
+                        font-size: 35px;
+                    }   
+                    @include responsive(sm){
+                        font-size: 28px;   
+                    }
+                    @include responsive(xs){
+                        font-size: 26px;   
+                    }    
+                }
+            }
+            .content{
+                .list-item{
+                    font-size: 18px;
+                    font-family: 'Charlevoix Pro';
+                    color: #231c1e;
+                    margin-bottom: 20px;
+
+                    @include responsive(sm){
+                        font-size: 16px;   
+                    }
+                    @include responsive(xs){
+                        font-size: 14px;   
+                    } 
+                }
+            }
+        }
+    }
+}

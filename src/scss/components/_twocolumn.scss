@@ -2,7 +2,7 @@
     padding:0px 40px;
     position: relative;
 
-    @media(max-Width:991px){
+    @include responsive(md){
         padding: 0 20px;
     }
     &.blue{
@@ -125,14 +125,14 @@
         padding: 200px 0px;
         gap: 100px;
     
-        @media(max-Width:1200px){
+        @include responsive(xl){
             gap: 50px;
         }
-        @media(max-Width:991px){
+        @include responsive(md){
             gap: 20px;
             padding: 150px 0;
         }
-        @media(max-Width:767px){
+        @include responsive(sm){
             flex-direction: column !important;
             padding: 50px 0;
             gap: 30px;
@@ -144,7 +144,7 @@
             justify-content: center;
             align-items: center;
 
-            @media(max-Width:767px){
+            @include responsive(sm){
                 width: 80%;
             }            
     
@@ -156,7 +156,7 @@
         .content-wrap{
             width: 40%;
 
-            @media(max-Width:767px){
+            @include responsive(sm){
                 width: 100%;
             }
     
@@ -165,10 +165,10 @@
                 margin-bottom: 20px;
                 font-family: 'Charlevoix Pro';
     
-                @media(max-Width:1200px){
+                @include responsive(xl){
                     font-size: 26px;
                 }
-                @media(max-Width:991px){
+                @include responsive(md){
                     font-size: 20px;
                     margin-bottom: 10px;
                 }
@@ -180,10 +180,10 @@
                 margin-bottom: 40px;
                 max-width: 500px;
     
-                @media(max-Width:1200px){
+                @include responsive(xl){
                     font-size: 65px;
                 }
-                @media(max-Width:991px){
+                @include responsive(md){
                     font-size: 55px;
                     margin-bottom: 20px;
                 }
@@ -199,10 +199,10 @@
                         margin: 0;
                     }
     
-                    @media(max-Width:1200px){
+                    @include responsive(xl){
                         font-size: 16px;
                     }
-                    @media(max-Width:991px){
+                    @include responsive(md){
                        margin-bottom: 10px;
                     }
                 }
@@ -214,7 +214,7 @@
                 right: 5%;
                
 
-                @media(max-Width:1200px){
+                @include responsive(xl){
                     width: 150px;
                 }
                 
