@@ -1,4 +1,8 @@
+import BannerContent from '../components/BannerContent';
 import Table from '../components/Table';
+import Header from '../components/Header';
+import bannerImage from '../assets/images/availabilities/banner.jpg'
+import Hero from '../components/Hero';
 
 const Availabilities = () => {
     let TableData = [
@@ -65,8 +69,20 @@ const Availabilities = () => {
             }
         ]
     ]
+    let heroData = {
+        backgroundImage : bannerImage,
+        heading : "",
+        description: ""
+    }
+    let bannerContentData = {
+        heading : "Check Availability",
+        description : "Dive into luxury living at Ocean 1946 – where every corner is crafted for comfort and style. Explore our range of exquisite units and floor plans, tailored to suit your New York City dreams. Discover the perfect chapter for your next adventure at Ocean 1946."
+    }
     return ( 
     <>
+        <Header />
+        <Hero data={heroData} />
+        <BannerContent data={bannerContentData} />
         <Table data={TableData}/>
     </> 
     );
