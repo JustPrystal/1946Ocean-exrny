@@ -13,7 +13,7 @@ const MapLegend = ({data}) => {
                                     {
                                         legendItem.list.map((listItem, itemIndex)=>{
                                             return (
-                                                <p className="list-item">
+                                                <p className="list-item" key={itemIndex}>
                                                     {listItem}
                                                 </p>
                                             )
