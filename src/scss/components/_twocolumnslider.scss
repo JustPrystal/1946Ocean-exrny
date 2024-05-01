@@ -1,22 +1,228 @@
-.slider-section{
+
+.slider-blurb-wrap{
+    background-color: #5e7584;
+    padding: 100px 0px 80px 0px;
+    @include responsive(md){
+        padding: 75px 0px 60px 0px;
+    }
+    @include responsive(xs){
+        padding: 40px 0px 40px 0px;
+    }
     .blurb{
         max-width: 1440px;
-        margin: 0 auto;
+        margin: 75px auto;
+        padding: 0px 20px;
         display: flex;
         justify-content: space-between;
+        position: relative;
+        @include responsive(lg){
+            margin: 50px auto;
+        }
+        @include responsive(sm){
+            flex-direction: column;
+        }
+        &.row-reverse{
+            flex-direction: row-reverse;
+            .slider{
+                ul.slick-dots{
+                    border-radius: 0px 0px 30px 0px;
+                    @include responsive(sm){
+                        border-radius: unset;
+                    }
+                }
+            }
+            .content{
+                border-radius: 30px 0px 0px 30px;
+                padding: 60px 20px 60px 40px;
+                @include responsive(xl){
+                    padding: 60px 20px 60px 30px;
+                }
+                @include responsive(sm){
+                    padding: 50px 20px 40px 20px;
+                    border-radius: 0px 0px 30px 30px;
+                }
+            }    
+            @include responsive(sm){
+                flex-direction: column;
+            }
+        }
         .slider{
             width: 58%;
-            display: flex;
-            .slides{
-                .image{
-                    width: 30%;
+            @include responsive(sm){
+                height: 45vh;
+                width: 100%;
+            }
+            .slick-list, .slick-track{
+                height: 100%;
+            }
+            .slick-slide>div{
+                height: 100%;
+            }
+            .slide{
+                height: 100%;
+                .inner-div{
+                    height: calc( 100% - 24px);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
                 }
+            }
+            ul.slick-dots{
+                bottom: 0px;
+                background-color: #231C1E;
+                border-radius: 0px 0px 0px 30px;
+                @include responsive(sm){
+                    border-radius: unset;
+                }
+                li{
+                    button{
+                        &::before{
+                            color: #f4e9d7;
+                            opacity: 1;
+                        }
+                    }
+                }
+                li.slick-active{
+                    button{
+                        &::before{
+                            color: #5e7584;
+                            opacity: 1;
+                        }
+                    }
+                }
+
             }
 
         }
         .content{
-            width: 38%;
-
+            width: 42%;
+            padding: 60px 15px 60px 57px;
+            background-color: white;
+            border-radius: 0px 30px 30px 0px;
+            @include responsive(xl){
+                padding: 60px 20px 60px 45px;
+            }
+            @include responsive(lg){
+                padding: 60px 20px 50px 30px;
+            }
+            @include responsive(sm){
+                width: 100%;
+                padding: 50px 20px 40px 20px;
+                border-radius: 0px 0px 30px 30px;
+            }
+            .heading{
+                font-size: 87px;
+                line-height: 1em;
+                font-family: 'Bentago';
+                color: #8E591B;
+                font-weight: normal;
+                margin-bottom: 30px;
+                span{
+                    color: #5e7584;
+                }
+                @include responsive(xl){
+                    font-size: 50px;
+                    margin-bottom: 25px;
+                }
+                @include responsive(md){
+                    font-size: 40px;
+                    margin-bottom: 22px;
+                }
+            }
+            .price{
+                color: #2D4241;
+                font-size: 23px;
+                margin-bottom: 30px;
+                font-family: 'Charlevoix Pro';
+                span{
+                    color: #2D4241;
+                    font-size: 30px;
+                    font-weight: 500;
+                    font-family: 'Bentago';
+                    @include responsive(xl){
+                        font-size: 24px;
+                    }
+                    @include responsive(md){
+                        font-size: 20px;
+                    }
+                    @include responsive(sm){
+                        font-size: 24px;
+                    }
+                    @include responsive(xs){
+                        font-size: 20px;
+                    }
+                }
+                @include responsive(xl){
+                    font-size: 18px;
+                    margin-bottom: 25px;
+                }
+                @include responsive(md){
+                    font-size: 16px;
+                    margin-bottom: 22px;
+                }
+                @include responsive(sm){
+                    font-size: 18px;
+                }
+                @include responsive(xs){
+                    font-size: 16px;
+                }
+            }
+            .description{
+                color: #231C1E;
+                font-family: 'Charlevoix Pro';
+                font-size: 18px;
+                font-weight: normal;
+                line-height: 1.8;
+                margin-bottom: 30px;
+                @include responsive(xl){
+                    line-height: 1.4;
+                    font-size: 16px;
+                    margin-bottom: 25px;
+                }
+                @include responsive(lg){
+                    line-height: 1.4;
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                }
+                @include responsive(md){
+                    font-size: 14px;
+                }
+                @include responsive(sm){
+                    font-size: 16px;
+                }
+                @include responsive(xs){
+                    font-size: 14px;
+                }
+            }
+            .button{
+                display: flex;
+                align-items: center;
+                a{
+                    font-size: 31px;
+                    font-family: 'Bentago';
+                    text-decoration: none;
+                    color: #231C1E;
+                    margin-right: 10px;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    @include responsive(xl){
+                        font-size: 26px;
+                    }
+                    @include responsive(md){
+                        font-size: 22px;
+                        margin-right: 8px; 
+                    }
+                }
+                
+                svg{
+                    width: 26px;
+                    @include responsive(md){
+                        width: 22px;
+                    }
+                }
+                
+            }
         }
     }
 }

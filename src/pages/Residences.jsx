@@ -1,6 +1,8 @@
 import BannerContent from "../components/BannerContent";
 import Header from "../components/Header";
 import bannerImage from "../assets/images/residences/banner-image.jpg";
+import QuickNav from '../components/QuickNav';
+import Footer from '../components/Footer';
 //1 bedroom slider images
 import slider1image1 from "../assets/images/residences/1 Bedroom/1946-Ocean-plans-and-renderings-14-scaled.jpg";
 import slider1image2 from "../assets/images/residences/1 Bedroom/1946-Ocean-plans-and-renderings-15-scaled.jpg";
@@ -35,7 +37,7 @@ let residenceData = [
         ],
         flexDirection : "row",
         heading: "1 Bedroom <span>Apartments<span/>" ,
-        price : "2,291", 
+        price : "<span>2,291</span>", 
         description : "<p>Step into refined living with our one-bedroom apartments, where comfort and style harmonize seamlessly. Thoughtfully crafted layouts optimize space, providing room for relaxation, work, and entertainment. Large windows flood the interiors with natural light, accentuating modern finishes and creating an inviting atmosphere. Experience the ideal blend of functionality and elegance, where every detail is designed with your comfort in mind.</p>",
     },
     {
@@ -46,7 +48,7 @@ let residenceData = [
         ],
         flexDirection : "row-reverse",
         heading: "2 Bedroom <span>Apartments<span/>" ,
-        price : "2,658", 
+        price : "<span>2,658</span>", 
         description : "<p>These expansive units offer endless possibilities, featuring contemporary open floor plans and state-of-the-art finishes throughout. Immaculately designed, every detail has been carefully considered, making these 2 bedroom Brooklyn apartments an ideal residence for those who seek to continually impress with their living space.</p>",
     },
 ]
@@ -58,11 +60,15 @@ const Residences = () => {
             <Header />
             <Hero data={heroData}/>
             <BannerContent data={bannerContentData} />
+            <section className="slider-blurb-wrap">
             {
                 residenceData.map((section, index) => {
                     return <TwoColumnSlider key={index} data={section} />;
                 })
             }
+            </section>
+            <QuickNav />
+            <Footer />
         </>
      );
 }
