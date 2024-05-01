@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import bannerImage from "../assets/images/Neighborhood/brooklyn-new-york-usa-cityscape-over-brooklyn-heights.jpg";
-import Map from "../components/Map";
+import MapContainer from "../components/Map";
 import MapLegend from '../components/MapLegend';
 import QuickNav from '../components/QuickNav';
 import Footer from '../components/Footer';
@@ -39,7 +39,7 @@ const Neighborhood = () => {
         <>
             <Header />
             <Hero data={heroData} />
-            <Map />
+            <MapContainer />
             <MapLegend data={MaplegendData} />
             <QuickNav />
             <Footer />
