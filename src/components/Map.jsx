@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Map from 'react-map-gl';
+import Map, {Marker} from 'react-map-gl';
 import mapLogo from '../assets/images/mapLogo.png';
 
 const MapContainer = () => {
@@ -7,8 +7,19 @@ const MapContainer = () => {
     // const popupRef = useRef();
     // const onMapPopupRef = useRef();
     // const mapNode = useRef(null);
-
-
+    const center = [-73.9546035, 40.6144579]
+    const geojson = {
+      'type': 'FeatureCollection',
+      'features': [
+        {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': center
+          }
+        }
+      ]
+    }
 
     // useEffect(()=>{
     //     const node = mapNode.current;
@@ -67,13 +78,16 @@ const MapContainer = () => {
             mapboxAccessToken="pk.eyJ1IjoiZXhybGFuZGluZ3MiLCJhIjoiY2x2Ym1paXF4MDRqNzJrbGhldDdzbzY2ZiJ9._NRv4-LW-AwL86_e3jKrLg"
             mapLib={import('mapbox-gl')}
             initialViewState={{
-              longitude: -100,
-              latitude: 40,
-              zoom: 3.5
+              longitude: -73.9546035,
+              latitude: 40.6144579,
+              zoom: 14
             }}
-            style={{width: 600, height: 400}}
             mapStyle="mapbox://styles/exrlandings/clvn3srf1003l01pfcy7j0c4p"
-          />;
+          >
+            <Marker longitude="-73.9546035" latitude="40.6144579" anchor="bottom">
+              <img src={mapLogo} alt="" />
+            </Marker>  
+          </Map>;
             {/* <iframe width='100%' height='400px' src="https://api.mapbox.com/styles/v1/exrlandings/clvmznvku01kj01oc3sd48f87.html?title=false&access_token=pk.eyJ1IjoiZXhybGFuZGluZ3MiLCJhIjoiY2x2Ym1paXF4MDRqNzJrbGhldDdzbzY2ZiJ9._NRv4-LW-AwL86_e3jKrLg&zoomwheel=false#2.07/21.65/9.3" title="1946Ocean" style={{"border" : "none", "marginBottom" : "-5px"}}></iframe> */}
         </section>
      );
