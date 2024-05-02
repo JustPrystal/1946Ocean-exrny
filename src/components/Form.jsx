@@ -39,9 +39,9 @@ const Form = () => {
                         <div
                            className='thankyou'
                         >
-                            <h1>
+                            <h2>
                                 Thank you!
-                            </h1>
+                            </h2>
                             <p>
                                 We’ll be in touch
                             </p>
