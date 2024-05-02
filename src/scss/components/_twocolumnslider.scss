@@ -1,7 +1,7 @@
 
 .slider-blurb-wrap{
     background-color: #5e7584;
-    padding: 100px 0px 80px 0px;
+    padding: 80px 0px;
     @include responsive(md){
         padding: 75px 0px 60px 0px;
     }
@@ -10,7 +10,8 @@
     }
     .blurb{
         max-width: 1440px;
-        margin: 75px auto;
+        margin: 0 auto;
+        margin-bottom: 50px;
         padding: 0px 20px;
         display: flex;
         justify-content: space-between;
@@ -75,6 +76,7 @@
                     border-radius: unset;
                 }
                 li{
+                    bottom: 2px;
                     button{
                         &::before{
                             color: #f4e9d7;

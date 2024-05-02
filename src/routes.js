@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Residences from "./pages/Residences";
 import Availabilities from "./pages/Availabilities";
 import Neighborhood from "./pages/Neighborhood";
+import Amenities from "./pages/Amenities";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     {
         path: "/contact",
         element: <Contact />,
+    },
+    {
+        path: "/amenities",
+        element: <Amenities />,
     },
     {
         path: "/residences",

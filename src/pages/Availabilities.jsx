@@ -3,6 +3,7 @@ import Table from '../components/Table';
 import Header from '../components/Header';
 import bannerImage from '../assets/images/availabilities/banner.jpg'
 import Hero from '../components/Hero';
+import QuickNav from '../components/QuickNav';
 
 const Availabilities = () => {
     let TableData = [
@@ -80,10 +81,10 @@ const Availabilities = () => {
     }
     return ( 
     <>
-        <Header />
         <Hero data={heroData} />
         <BannerContent data={bannerContentData} />
         <Table data={TableData}/>
+        <QuickNav />
     </> 
     );
 }

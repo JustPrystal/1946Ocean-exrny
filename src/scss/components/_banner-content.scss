@@ -7,13 +7,12 @@
     }
 
     .inner{
-        max-width: 1550px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 50px 0;
+        padding: 80px 0;
 
         .heading{
             color: #fff;
@@ -22,6 +21,7 @@
             font-family: 'Bentago';
             font-weight: 500;
             line-height: 100%;
+            margin-bottom: 20px;
 
             @include responsive(xl){
                 font-size: 78px;
@@ -45,8 +45,10 @@
             font-family: 'Charlevoix Pro';
             text-align: center;
             margin-top: 20px;
-            width: 80%;
+            width: 60%;
+            line-height: 2;
             @include responsive(md){
+                width: 100%;
                 font-size: 16px;
             }
         }  

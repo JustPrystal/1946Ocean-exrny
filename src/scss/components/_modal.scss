@@ -3,6 +3,7 @@
     padding: 100px 40px;
     // position: fixed;
     // inset: 0;
+    display: none;
 
     @include responsive(sm){
         padding: 100px 10px;

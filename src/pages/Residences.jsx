@@ -42,14 +42,25 @@ let residenceData = [
     },
     {
         images : [
-            slider1image1,
-            slider1image2,
-            slider1image3
+            slider2image1,
+            slider2image2,
+            slider2image3
         ],
         flexDirection : "row-reverse",
         heading: "2 Bedroom <span>Apartments<span/>" ,
         price : "<span>2,658</span>", 
         description : "<p>These expansive units offer endless possibilities, featuring contemporary open floor plans and state-of-the-art finishes throughout. Immaculately designed, every detail has been carefully considered, making these 2 bedroom Brooklyn apartments an ideal residence for those who seek to continually impress with their living space.</p>",
+    },
+    {
+        images : [
+            slider3image1,
+            slider3image2,
+            slider3image3
+        ],
+        flexDirection : "row",
+        heading: "3 Bedroom <span>Apartments<span/>" ,
+        price : "<span>3,650</span>", 
+        description : "<p>Step into luxury living with our spacious three-bedroom apartments at 1946 Ocean. Redefining New York living, these residences offer versatile layouts perfect for roommates, guests, or a separate home office. Experience expansive floor plans thoughtfully designed to accommodate your every need, ensuring comfort and convenience at every turn.</p>",
     },
 ]
 
@@ -57,7 +68,6 @@ let residenceData = [
 const Residences = () => {
     return ( 
         <>
-            <Header />
             <Hero data={heroData}/>
             <BannerContent data={bannerContentData} />
             <section className="slider-blurb-wrap">
@@ -68,7 +78,6 @@ const Residences = () => {
             }
             </section>
             <QuickNav />
-            <Footer />
         </>
      );
 }

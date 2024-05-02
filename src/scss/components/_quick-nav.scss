@@ -9,11 +9,12 @@
     .inner{
         max-width: 1400px;
         margin: 0 auto;
-        padding: 30px 0px;
+        padding: 60px 0px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        border-bottom: 2px solid white;
 
         @include responsive(sm){
             justify-content: center;
@@ -21,7 +22,7 @@
 
 
         .prev-page{
-
+            cursor: pointer;
             padding: 12px 22px;
             display: flex;
             gap: 20px;
@@ -112,7 +113,7 @@
         }
 
         .next-page{
-
+            cursor: pointer;
             padding: 12px 22px;
             display: flex;
             align-items: center;

@@ -122,8 +122,9 @@
     .inner{
         max-Width:1440px;
         margin: 0 auto;
-        padding: 200px 0px;
+        padding: 100px 0px;
         gap: 100px;
+        align-items: center;
     
         @include responsive(xl){
             gap: 50px;

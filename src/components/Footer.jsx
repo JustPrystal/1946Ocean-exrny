@@ -19,12 +19,12 @@ const Footer = () => {
                         <div className="menu">
                             <h4 className="heading"> Menu </h4>
                             <ul className="links">
-                                <li className="link"> <a href="#"> Home </a> </li>
-                                <li className="link"> <a href="#"> Residences </a> </li>
-                                <li className="link"> <a href="#"> Amenities </a> </li>
-                                <li className="link"> <a href="#"> Availabilities </a> </li>
-                                <li className="link"> <a href="#"> Neighborhood </a> </li>
-                                <li className="link"> <a href="#"> Contact </a> </li>
+                                <li className="link"> <a href="/"> Home </a> </li>
+                                <li className="link"> <a href="/residences"> Residences </a> </li>
+                                <li className="link"> <a href="/amenities"> Amenities </a> </li>
+                                <li className="link"> <a href="/availabilities"> Availabilities </a> </li>
+                                <li className="link"> <a href="/neighborhood"> Neighborhood </a> </li>
+                                <li className="link"> <a href="/contact"> Contact </a> </li>
                             </ul>
                         </div>
                     </div>

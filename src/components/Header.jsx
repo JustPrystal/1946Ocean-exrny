@@ -25,12 +25,12 @@ const Header = () => {
     <header className={(headerToggle ? "" : "closed")}>
       <div className="header-wrap">
         <div className="links">
-          <a href="#" className="link">Home</a>
-          <a href="#" className="link">Residences</a>
-          <a href="#" className="link">Amenities</a>
-          <a href="#" className="link">Availabilities</a>
-          <a href="#" className="link">Neighborhood</a>
-          <a href="#" className="link">Contact</a>
+          <a href="/" className="link">Home</a>
+          <a href="/residences" className="link">Residences</a>
+          <a href="/amenities" className="link">Amenities</a>
+          <a href="/availabilities" className="link">Availabilities</a>
+          <a href="/neighborhood" className="link">Neighborhood</a>
+          <a href="/contact" className="link">Contact</a>
         </div>
         <div className="logo-wrap">
           <a href="#">
