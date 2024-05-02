@@ -5,6 +5,17 @@ import headerLogo from '../assets/images/header_logo.png';
 
 
 const Header = () => {
+  document.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+    }
+    else{
+      header.classList.remove('scrolled');
+    }
+  });
+  
   return (
     <header>
       <div className="header-wrap">

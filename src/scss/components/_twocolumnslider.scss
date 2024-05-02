@@ -197,10 +197,10 @@
             .button{
                 display: flex;
                 align-items: center;
-                a{
+                text-decoration: none;
+                .view-availability{
                     font-size: 31px;
                     font-family: 'Bentago';
-                    text-decoration: none;
                     color: #231C1E;
                     margin-right: 10px;
                     &:hover{
@@ -209,19 +209,20 @@
                     @include responsive(xl){
                         font-size: 26px;
                     }
+                    @include responsive(lg){
+                        margin-right: 8px;
+                    }
                     @include responsive(md){
                         font-size: 22px;
-                        margin-right: 8px; 
+                        margin-right: 6px; 
                     }
                 }
-                
-                svg{
+                .arrow{
                     width: 26px;
                     @include responsive(md){
                         width: 22px;
                     }
                 }
-                
             }
         }
     }
