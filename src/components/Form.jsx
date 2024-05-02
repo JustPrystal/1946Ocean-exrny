@@ -1,27 +1,79 @@
+import { useState } from 'react';
 import FormImage from '../assets/images/contact/contact-image-3.png';
+import axios from 'axios';
 
 const Form = () => {
+    const [isFormSent, setFormSent] = useState(false);
+    const formSubmit = async (e)=>{
+        e.preventDefault();
+        const tracking = await JSON.parse(localStorage.getItem("tracking"));
+        const formData = new FormData(e.target);
+        const { full_name, email, phone_number, layout, move_in_date, message} = Object.fromEntries(formData);
+        const data = {
+            full_name,
+            phone_number,
+            email,
+            source: '1946oceans.com',
+            layout,
+            move_in_date,
+            message,
+            tracking,
+        };
+        axios.post('https://www.exrny.com/api/leads/', data).finally(() => {
+            e.target.reset()
+            setFormSent(true);
+        })
+    }
     return (
         <section className="form-image">
            <div className="inner">
                 <div className="content">
-                    <div className="form" >
-                        haha Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, vero atque! Recusandae provident cum aspernatur deleniti dolor iste, atque praesentium dignissimos perferendis nemo voluptatibus sint esse ratione vitae, ducimus sequi!
-                        Quaerat fugiat porro alias non dignissimos, sapiente explicabo, debitis mollitia perferendis iusto eos iure! Culpa optio accusamus, doloribus tenetur, dolor inventore ea, quisquam voluptatem obcaecati ipsam id itaque doloremque ut?
-                        Quo impedit facere atque, vitae eligendi cumque! Deserunt ea fuga cum consequatur ratione, iste, vitae reprehenderit ipsum voluptate illum iusto itaque tempore. Voluptates aliquam reiciendis tempore, aspernatur vitae quibusdam a?
-                        Id, hic maxime quod perferendis repellat reiciendis earum modi laborum neque fugiat. Odio amet nobis quo suscipit magni delectus esse consequatur magnam laudantium in, repudiandae sit rem, dolores eius repellendus.
-                        Ipsam sequi repudiandae soluta veritatis repellat accusamus culpa delectus, saepe recusandae non dolore id, error qui, quae sint earum doloribus deleniti ullam maxime voluptas consequuntur officiis itaque! Velit, sint voluptatum.
-                        Eligendi reiciendis, earum a aspernatur consequatur consequuntur ad quae sit tenetur, quis deleniti debitis? Recusandae cupiditate magnam facere esse nulla quae quibusdam eos inventore incidunt reiciendis! Quas consequuntur eligendi dolores.
-                        Vitae ab quia velit ut sed quaerat ex aspernatur deserunt temporibus explicabo, quod, corrupti tempora illo exercitationem quidem, soluta laborum. Soluta corrupti amet quae laudantium itaque magnam. Libero, quia eveniet.
-                        Delectus dolorem tenetur labore aliquid error assumenda eligendi adipisci consectetur sit sapiente, tempore maiores consequatur laborum voluptatibus deleniti mollitia suscipit ad voluptate atque fugiat fuga quia! Incidunt voluptate laboriosam laborum!
-                        Qui iusto eius aliquam maiores odio dolore, aut optio consequuntur, natus possimus vitae quisquam aliquid cum dolor dignissimos, saepe tempore dicta vero. Cum et molestiae consequuntur sit necessitatibus? Quos, ea?
-                        Quis unde cupiditate porro saepe, dolorum excepturi, at magnam voluptas quos in error id, voluptates expedita odit a quam perspiciatis obcaecati sed fuga qui. Modi non rerum dolorum temporibus accusamus.
+                    <div className="form">
+                    <form
+                        onSubmit={formSubmit}
+                        id='main_form'
+                    >
+                    {
+                    isFormSent
+                        ? (
+                        <div
+                           className='thankyou'
+                        >
+                            <h1>
+                                Thank you!
+                            </h1>
+                            <p>
+                                We’ll be in touch
+                            </p>
+                        </div>
+                        )
+                        : (
+                            <>
+                                <input class="form-control-input full-name" type="text" placeholder="Full Name" name="full_name" />
+                                <input class="form-control-input email" type="email" placeholder="Email address" name="email" />
+                                <input class="form-control-input phone" type="tel" placeholder="Phone number" name="phone_number" pattern="[0-9\-]*"/>
+                                <div className="select-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z" fill="#000000"></path> </g></svg>
+                                    <select class="form-control-input layout" name="layout">
+                                        <option value="" disabled selected>Desired layout</option>
+                                        <option value="0">1 Bed</option>
+                                        <option value="1">2 Bed</option>
+                                        <option value="2">3 Bed</option>
+                                    </select>
+                                </div>
+                                <input class="form-control-input email" type="date" name="move_in_date" />
+                                <textarea name="message" placeholder='Message' rows="2" />
+                                <button type="submit" class="button submit" id="send">Send Message</button>
+                            </>
+                        )
+                    }
+                    </form>
                     </div>
                     <div className="text-button">
                         <p className="txt">
                             Looking for a link to apply?
                         </p>
-                        <a href="#" className="button"> 
+                        <a href="https://www.exrny.com/apply?utm_source=website&utm_medium=referral&utm_campaign=apply" className="button"> 
                             Click here 
                         </a>
                     </div>

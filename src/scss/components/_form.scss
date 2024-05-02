@@ -34,8 +34,64 @@
                 width: 100%;
             }
             .form{
-                background-color: #f4e9d7;
-                margin-bottom: 20px;
+                input, select, textarea{
+                    height: 66px;
+                    width: 100%;
+                    border-radius: 3px;
+                    background-color: #f4e9d7;
+                    margin-bottom: 20px;
+                    padding: 0 30px;
+                    border: 0;
+                    font-size: 18px;
+                    font-family: 'Charlevoix Pro';
+                    &:focus, &:focus-visible{
+                        border: none;
+                        outline: none;
+                        outline-offset: 0;
+                    }
+                }
+                textarea{
+                    padding: 20px 30px;
+                    height: 140px;
+                    resize: none;
+                }
+                .select-wrap{
+                    position: relative;
+                    svg{
+                        width: 20px;
+                        right: 30px;
+                        pointer-events: none;
+                        top: calc(50% - 20px);
+                        // transform: translateY(-50%);
+                        position: absolute;
+                    }
+                    select { 
+                        /* for Firefox */ 
+                        -moz-appearance: none; 
+                        /* for Safari, Chrome, Opera */ 
+                        -webkit-appearance: none;
+                    } 
+                }
+                input[type="date"]::-webkit-inner-spin-button,
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    cursor: pointer;
+                }
+                .button{
+                    background-color: #996936;
+                    color: white;
+                    font-family: "bentago";
+                    font-size: 33px;
+                    width: 100%;
+                    border: 0;
+                    padding: 25px;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    transition: 300ms;
+                    &:hover{
+                        background-color: #231c1e;
+                    }
+                }
+                
             }
             .text-button{
                 width: 100%;

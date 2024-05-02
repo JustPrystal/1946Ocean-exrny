@@ -2,9 +2,14 @@ import { Link } from 'react-router-dom';
 import menuIcon from '../assets/images/menu.svg';
 import cross from '../assets/images/cross.svg';
 import headerLogo from '../assets/images/header_logo.png';
+import { useState } from 'react';
 
 
 const Header = () => {
+  const [headerToggle, setHeaderToggle] = useState('false');
+  const handleToggle = ()=>{
+    setHeaderToggle(headerToggle?false:true)
+  }
   document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
 
@@ -17,7 +22,7 @@ const Header = () => {
   });
   
   return (
-    <header>
+    <header className={(headerToggle ? "" : "closed")}>
       <div className="header-wrap">
         <div className="links">
           <a href="#" className="link">Home</a>
@@ -35,7 +40,7 @@ const Header = () => {
         <div className="schedule-button">
           <a href="#">Schedule A Tour</a>
         </div>
-        <div className="menu-button">
+        <div className="menu-button" onClick={handleToggle}>
           <img className="hamburger" src={menuIcon} alt="" />
           <img className="cross" src={cross} alt="" />
           <span>Menu</span>
