@@ -1,7 +1,7 @@
 import BannerContent from "../components/BannerContent";
-import Header from "../components/Header";
 import bannerImage from "../assets/images/residences/banner-image.jpg";
 import QuickNav from '../components/QuickNav';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 //1 bedroom slider images
 import slider1image1 from "../assets/images/residences/1 Bedroom/1946-Ocean-plans-and-renderings-14-scaled.jpg";
@@ -27,6 +27,16 @@ let heroData = {
 let bannerContentData = {
     heading: "Experience Luxury Living in Brooklyn",
     description: "Nestled within the vibrant neighborhood of Midwood, Brooklyn, 946 Ocean Avenue epitomizes luxury living at its finest. These opulent apartments offer a seamless blend of modern elegance and urban convenience."
+}
+let QuickLinks = {
+    prev : {
+        title : "Amenities",
+        url : "/amenities"
+    },
+    next : {
+        title : "Neighborhood",
+        url : "/neighborhood"
+    }
 }
 let residenceData = [
     {
@@ -68,6 +78,7 @@ let residenceData = [
 const Residences = () => {
     return ( 
         <>
+            <Header/>
             <Hero data={heroData}/>
             <BannerContent data={bannerContentData} />
             <section className="slider-blurb-wrap">
@@ -77,7 +88,8 @@ const Residences = () => {
                 })
             }
             </section>
-            <QuickNav />
+            <QuickNav links={QuickLinks}/>
+            <Footer/>
         </>
      );
 }

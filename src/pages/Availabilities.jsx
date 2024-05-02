@@ -1,9 +1,10 @@
 import BannerContent from '../components/BannerContent';
 import Table from '../components/Table';
-import Header from '../components/Header';
 import bannerImage from '../assets/images/availabilities/banner.jpg'
 import Hero from '../components/Hero';
 import QuickNav from '../components/QuickNav';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Availabilities = () => {
     let TableData = [
@@ -79,12 +80,24 @@ const Availabilities = () => {
         heading : "Check Availability",
         description : "Dive into luxury living at Ocean 1946 – where every corner is crafted for comfort and style. Explore our range of exquisite units and floor plans, tailored to suit your New York City dreams. Discover the perfect chapter for your next adventure at Ocean 1946."
     }
+    let QuickLinks = {
+        prev : {
+            title : "Contact",
+            url : "/contact"
+        },
+        next : {
+            title : "Residences",
+            url : "/residences"
+        }
+    }
     return ( 
     <>
+        <Header/>
         <Hero data={heroData} />
         <BannerContent data={bannerContentData} />
         <Table data={TableData}/>
-        <QuickNav />
+        <QuickNav links={QuickLinks}/>
+        <Footer/>
     </> 
     );
 }

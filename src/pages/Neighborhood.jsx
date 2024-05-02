@@ -1,12 +1,12 @@
-import Header from '../components/Header';
 import Hero from '../components/Hero';
 import bannerImage from "../assets/images/Neighborhood/brooklyn-new-york-usa-cityscape-over-brooklyn-heights.jpg";
 import MapContainer from "../components/Map";
 import MapLegend from '../components/MapLegend';
 import QuickNav from '../components/QuickNav';
-import Footer from '../components/Footer';
 import BannerContent from '../components/BannerContent';
 import TwoColumn from '../components/TwoColumn';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 //twocolumn images
 import parkImage from '../assets/images/Neighborhood/TwoColumn/brooklyn-marine-park-2048x2034.png';
 import collegeImage from '../assets/images/Neighborhood/TwoColumn/brooklyn-colege.png';
@@ -121,10 +121,21 @@ let TwoColumnData = [
         logo : false,
     },
 ]
+let QuickLinks = {
+    prev : {
+        title : "Contact",
+        url : "/contact"
+    },
+    next : {
+        title : "Residences",
+        url : "/residences"
+    }
+}
 
 const Neighborhood = () => {
     return ( 
         <>
+            <Header/>
             <Hero data={heroData} />
             <BannerContent data={bannerContentData}/>
             {
@@ -134,7 +145,8 @@ const Neighborhood = () => {
             }
             <MapContainer />
             <MapLegend data={MaplegendData} />
-            <QuickNav />
+            <QuickNav links={QuickLinks}/>
+            <Footer/>
         </>
      );
 }

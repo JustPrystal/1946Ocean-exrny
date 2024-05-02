@@ -12,6 +12,8 @@ import lobbyImage from '../assets/images/amenities/TwoColumn/lobby-2.png'
 import mailImage from '../assets/images/amenities/TwoColumn/mailboxes-2-2012x2048.png'
 import parkingImage from '../assets/images/amenities/TwoColumn/parking.png'
 import QuickNav from '../components/QuickNav';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Amenities = () => {
     let heroData = {
@@ -97,9 +99,20 @@ const Amenities = () => {
             logo : false,
         },
     ]
+    let QuickLinks = {
+        prev : {
+            title : "Residences",
+            url : "/residences"
+        },
+        next : {
+            title : "Availabilities",
+            url : "/availabilities"
+        }
+    }
     
     return ( 
         <>
+            <Header />
             <Hero data={heroData}/>
             <BannerContent data={bannerContentData} />
             {
@@ -107,7 +120,8 @@ const Amenities = () => {
                     return <TwoColumn key={index} data={section} />;
                 })
             }
-            <QuickNav />
+            <QuickNav links={QuickLinks}/>
+            <Footer />
         </>
      );
 }

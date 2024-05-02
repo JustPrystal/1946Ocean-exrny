@@ -1,9 +1,9 @@
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import bannerImage from '../assets/images/contact/banner.jpg';
 import Form from '../components/Form';
 import BannerContent from "../components/BannerContent";
-import QuickNav from "../components/QuickNav";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 let heroData = {
     backgroundImage : bannerImage,
@@ -18,9 +18,11 @@ let bannerContentData = {
 const Contact = () => {
     return ( 
         <>
+            <Header/>
             <Hero data={heroData} />
             <BannerContent data={bannerContentData}/>
             <Form />
+            <Footer/>
         </>
      );
 }

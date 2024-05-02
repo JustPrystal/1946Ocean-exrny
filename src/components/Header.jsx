@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
 import menuIcon from '../assets/images/menu.svg';
 import cross from '../assets/images/cross.svg';
 import headerLogo from '../assets/images/header_logo.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -10,35 +10,36 @@ const Header = () => {
   const handleToggle = ()=>{
     setHeaderToggle(headerToggle?false:true)
   }
-  document.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
+  // document.addEventListener('scroll', () => {
+  //   const header = document.querySelector('header');
 
-    if (window.scrollY > 0) {
-      header.classList.add('scrolled');
-    }
-    else{
-      header.classList.remove('scrolled');
-    }
-  });
+  //   if (window.scrollY > 0) {
+  //     header.classList.add('scrolled');
+  //   }
+  //   else{
+  //     header.classList.remove('scrolled');
+  //   }
+  // });
   
   return (
     <header className={(headerToggle ? "" : "closed")}>
       <div className="header-wrap">
+        
         <div className="links">
-          <a href="/" className="link">Home</a>
-          <a href="/residences" className="link">Residences</a>
-          <a href="/amenities" className="link">Amenities</a>
-          <a href="/availabilities" className="link">Availabilities</a>
-          <a href="/neighborhood" className="link">Neighborhood</a>
-          <a href="/contact" className="link">Contact</a>
+          <Link to="/" className="link">Home</Link>
+          <Link to="/residences" className="link">Residences</Link>
+          <Link to="/amenities" className="link">Amenities</Link>
+          <Link to="/availabilities" className="link">Availabilities</Link>
+          <Link to="/neighborhood" className="link">Neighborhood</Link>
+          <Link to="/contact" className="link">Contact</Link>
         </div>
         <div className="logo-wrap">
-          <a href="#">
+          <Link to="/">
             <img className="logo" src={headerLogo} alt=""/>
-          </a>
+          </Link>
         </div>
         <div className="schedule-button">
-          <a href="#">Schedule A Tour</a>
+          <Link to="/contact" >Schedule A Tour</Link>
         </div>
         <div className="menu-button" onClick={handleToggle}>
           <img className="hamburger" src={menuIcon} alt="" />

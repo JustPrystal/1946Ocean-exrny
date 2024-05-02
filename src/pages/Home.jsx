@@ -1,4 +1,3 @@
-import Header from '../components/Header';
 import Hero from '../components/Hero';
 import bannerImage from '../assets/images/home/banner.jpg';
 import unitDetailsImage from '../assets/images/home/unit-details-image.png';
@@ -6,9 +5,8 @@ import amenitiesImage from '../assets/images/home/amenities-image.png';
 import neighboehoodImage from '../assets/images/home/img-5-with-border-2.png';
 import TwoColumn from '../components/TwoColumn';
 import QuickNav from '../components/QuickNav';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Modal from '../components/Modal';
-
 
 let heroData = {
     backgroundImage : bannerImage,
@@ -48,18 +46,30 @@ let TwoColumnData = [
         logo : true,
     },
 ]
+let QuickLinks = {
+    prev : {
+        title : "Contact",
+        url : "/contact"
+    },
+    next : {
+        title : "Residences",
+        url : "/residences"
+    }
+}
 
 
 const Home = () => {
     return ( 
         <>
+            <Header />
             <Hero data={heroData} />
             {
                 TwoColumnData.map((section, index) => {
                     return <TwoColumn key={index} data={section} />;
                 })
             }
-            <QuickNav />
+            <QuickNav links={QuickLinks}/>
+            <Footer />
         </>
      );
 }
