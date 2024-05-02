@@ -13,7 +13,7 @@ const TwoColumn = ({data}) => {
 
                     <div className="image-wrap">
 
-                        <img src={image} alt="image" />
+                        <img src={image} alt="two-col" />
 
                     </div>
 

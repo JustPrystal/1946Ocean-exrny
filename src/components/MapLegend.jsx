@@ -1,5 +1,4 @@
 const MapLegend = ({data}) => {
-    const {heading, list} = data;
     return ( 
         <section className="maplegend">
             <div className="inner">

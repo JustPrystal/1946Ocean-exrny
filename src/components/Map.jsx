@@ -1,21 +1,8 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import Map, {Marker} from 'react-map-gl';
 import mapLogo from '../assets/images/mapLogo.png';
 
 const MapContainer = () => {
-    const center = [-73.9546035, 40.6144579]
-    const geojson = {
-      'type': 'FeatureCollection',
-      'features': [
-        {
-          'type': 'Feature',
-          'geometry': {
-            'type': 'Point',
-            'coordinates': center
-          }
-        }
-      ]
-    }
     return ( 
         <section class="map" id="map" style={{
             "height" : "600px" 

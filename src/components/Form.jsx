@@ -79,7 +79,7 @@ const Form = () => {
                     </div>
                 </div>
                 <div className="image-wrap">
-                    <img src={FormImage} alt="image" />
+                    <img src={FormImage} alt="form"/>
                 </div>
            </div>
         </section>
