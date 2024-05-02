@@ -35,20 +35,20 @@
     .inner{
         max-width: 1440px;
         margin: 0 auto;
-        padding: 250px 100px 275px 100px;
+        padding: 220px 100px 305px 100px;
         display: flex;
         justify-content: center;
         @include responsive(lg){
-            padding: 250px 100px 320px 100px;
+            padding: 378px 100px 340px 100px;
         }
         @include responsive(md){
-            padding: 100px 80px 140px 80px;
+            padding: 243px 80px 145px 80px;
         }
         @include responsive(sm){
-            padding: 100px 20px 135px 20px;
+            padding: 233px 20px 150px 20px;
         }
         @include responsive(xs){
-            padding: 60px 20px 50px 20px;
+            padding: 180px 20px 78px 20px;
         }
         .content{
             text-align: center;
