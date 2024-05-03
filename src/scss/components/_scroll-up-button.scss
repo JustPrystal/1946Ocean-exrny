@@ -13,4 +13,7 @@
     &:hover{
         background-color: #C29F7B;
     }
+    @include responsive(sm){
+        display: none;
+    }
 }
