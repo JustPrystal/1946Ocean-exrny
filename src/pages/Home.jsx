@@ -7,6 +7,7 @@ import TwoColumn from '../components/TwoColumn';
 import QuickNav from '../components/QuickNav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ScrollUpButton from '../components/ScrollUpButton';
 
 let heroData = {
     backgroundImage : bannerImage,
@@ -70,6 +71,7 @@ const Home = () => {
             }
             <QuickNav links={QuickLinks}/>
             <Footer />
+            <ScrollUpButton />
         </>
      );
 }
