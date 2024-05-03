@@ -31,6 +31,7 @@
             align-items: center;
             justify-content: flex-end;
             text-decoration-color: #FFC588;
+
             &:hover{
                 text-decoration: underline;
                 text-decoration-color: #FFC588;
@@ -51,7 +52,6 @@
 
             @include responsive(sm){
                 order: 1;
-                width: 50%;
                 gap: 10px;
             }
             @include responsive(xs){
@@ -90,6 +90,8 @@
         }
         .heading-wrap{
             padding: 15px;
+            width: 50%;
+            text-align: center;
 
             @include responsive(sm){
                 order: 0;
@@ -128,6 +130,7 @@
             gap: 20px;
             justify-content: flex-start;            
             text-decoration-color: #FFC588;
+
             &:hover{
                 text-decoration: underline;
                 text-decoration-color: #FFC588;
@@ -147,7 +150,6 @@
             }
             @include responsive(sm){
                 order: 2;
-                width: 50%;
                 gap: 10px;
             }
             @include responsive(xs){

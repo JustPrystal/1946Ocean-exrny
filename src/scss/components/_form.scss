@@ -91,6 +91,39 @@
                         background-color: #231c1e;
                     }
                 }
+                #main_form{
+                    margin-top: 20px;
+                    .thankyou{
+                        text-align: center;
+                        
+                        h2{
+                            font-family: 'Bentago';
+                            font-size: 87px;
+                            line-height: 1.3em;
+                            margin-bottom: 20px;
+                            font-weight: 500;
+                            color: #fff;
+
+                            @include responsive(md){
+                                font-size: 70px;
+                            }
+                            @include responsive(sm){
+                                font-size: 48px;
+                            }
+                        }
+                        p{
+                            color: #fff;
+                            font-size: 18px;
+                            font-family: 'Charlevoix Pro';
+                            line-height: 1.8em;
+                            font-weight: lighter;
+
+                            @include responsive(md){
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
                 
             }
             .text-button{
@@ -119,6 +152,12 @@
                     background-color: #2d4241;
                     color: #fff;
                     border-radius: 3px;
+                    transition: 300ms;
+
+                    &:hover{
+                        background-color: #000;
+                        text-decoration: underline;
+                    }
                 }
             }
         }

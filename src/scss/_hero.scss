@@ -82,6 +82,25 @@
                     font-size: 16px;
                 }
             }
+            a{
+                display: inline-block;
+                font-size: 16px;
+                color: #fff;
+                cursor: pointer;
+                font-family: "Charlevoix Pro";
+                border: 1px solid #fff;
+                text-decoration: none;
+                padding: 20px 30px;
+                margin-top: 40px;
+
+                &:hover{
+                    transition: 0.3s ease;
+                    color: #FFC588;
+                    text-decoration: underline;
+                    background-color: #996936;
+                    border-color: #FFC588;
+                }
+            }
         }
     }
 }

@@ -39,10 +39,10 @@ const Form = () => {
                         <div
                            className='thankyou'
                         >
-                            <h2>
+                            <h2 data-aos="fade-left">
                                 Thank you!
                             </h2>
-                            <p>
+                            <p data-aos="fade-left">
                                 We’ll be in touch
                             </p>
                         </div>
@@ -70,7 +70,7 @@ const Form = () => {
                     </form>
                     </div>
                     <div className="text-button">
-                        <p className="txt">
+                        <p className="txt" data-aos="fade-left">
                             Looking for a link to apply?
                         </p>
                         <a href="https://www.exrny.com/apply?utm_source=website&utm_medium=referral&utm_campaign=apply" className="button"> 

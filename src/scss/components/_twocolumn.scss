@@ -209,14 +209,20 @@
                 }
             }
             .logo{
-                width: 200px;
+                width: 10%;
                 position: absolute;
                 top: 15px;
                 right: 5%;
                
 
-                @include responsive(xl){
-                    width: 150px;
+                @include responsive(md){
+                    inset: 0;
+                    top: 0;
+                    left: 10px;
+                    width: 100px;
+                }
+                @include responsive(xs){
+                    width: 70px;
                 }
                 
                 img{
