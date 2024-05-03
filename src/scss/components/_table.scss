@@ -67,6 +67,7 @@
                 &.head{
                     font-family: "bentago";
                     color: white;
+                    font-size: 30px;
                     @include responsive(md){
                         font-size: 25px;
                         justify-content: center;

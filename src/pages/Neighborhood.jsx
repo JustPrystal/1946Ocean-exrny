@@ -16,6 +16,7 @@ import shoppingImage from '../assets/images/Neighborhood/TwoColumn/shopping.png'
 import libraryImage from '../assets/images/Neighborhood/TwoColumn/library-1-2012x2048.png';
 import busImage from '../assets/images/Neighborhood/TwoColumn/bus.png';
 import trainImage from '../assets/images/Neighborhood/TwoColumn/train.png';
+import { Helmet } from 'react-helmet';
 
 
 let heroData = {
@@ -135,6 +136,13 @@ let QuickLinks = {
 const Neighborhood = () => {
     return ( 
         <>
+            <Helmet>
+                <title>Discover Midwood – Brooklyn’s Residential Charm</title>
+                <meta name="description" content="Learn about life in Midwood, Brooklyn at 1946 Ocean. 
+Our luxury apartment complex is ideally located to blend modern living with 
+the charm and convenience of a Brooklyn neighborhood." />
+                {/* Add other meta tags as needed */}
+            </Helmet>
             <Header/>
             <Hero data={heroData} />
             <BannerContent data={bannerContentData}/>

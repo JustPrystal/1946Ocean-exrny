@@ -8,6 +8,7 @@ import QuickNav from '../components/QuickNav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollUpButton from '../components/ScrollUpButton';
+import { Helmet } from 'react-helmet';
 
 let heroData = {
     backgroundImage : bannerImage,
@@ -62,6 +63,10 @@ let QuickLinks = {
 const Home = () => {
     return ( 
         <>
+            <Helmet>
+                <title>1946 Ocean | Midwood's Newest Luxury Apartments</title>
+                <meta name="description" content="Discover luxury living at 1946 Ocean in Midwood, Brooklyn. Our apartments combine modern elegance with urban convenience, offering an unparalleled living experience for those seeking to rent in Brooklyn, New York." />
+            </Helmet>
             <Header />
             <Hero data={heroData} />
             {

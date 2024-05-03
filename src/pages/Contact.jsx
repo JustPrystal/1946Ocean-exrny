@@ -4,6 +4,7 @@ import Form from '../components/Form';
 import BannerContent from "../components/BannerContent";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Helmet } from "react-helmet";
 
 let heroData = {
     backgroundImage : bannerImage,
@@ -18,6 +19,13 @@ let bannerContentData = {
 const Contact = () => {
     return ( 
         <>
+            <Helmet>
+                <title>Contact us | 1946 Ocean Apartments, Midwood, Brooklyn</title>
+                <meta name="description" content="Looking for your next home in Brooklyn? Contact us at 
+1946 Ocean for more details about our luxury apartments and to discover 
+why we're Midwood’s top choice for upscale living." />
+                {/* Add other meta tags as needed */}
+            </Helmet>
             <Header/>
             <Hero data={heroData} />
             <BannerContent data={bannerContentData}/>

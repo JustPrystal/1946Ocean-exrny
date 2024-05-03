@@ -14,6 +14,7 @@ import parkingImage from '../assets/images/amenities/TwoColumn/parking.png'
 import QuickNav from '../components/QuickNav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const Amenities = () => {
     let heroData = {
@@ -112,6 +113,12 @@ const Amenities = () => {
     
     return ( 
         <>
+            <Helmet>
+                <title>Exclusive Amenities |1946 Ocean, Midwood, Brooklyn</title>
+                <meta name="description" content="1946 Ocean sets the standard with its upscale 
+amenities, including a lounge, fitness center, chef's kitchen, business center, 
+and parking, enhancing your living experience in Brooklyn." />
+            </Helmet>
             <Header />
             <Hero data={heroData}/>
             <BannerContent data={bannerContentData} />

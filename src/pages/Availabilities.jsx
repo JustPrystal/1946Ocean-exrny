@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import QuickNav from '../components/QuickNav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const Availabilities = () => {
     let TableData = [
@@ -92,6 +93,12 @@ const Availabilities = () => {
     }
     return ( 
     <>
+            <Helmet>
+                <title>Available Luxury Apartments at 1946 Ocean, Midwood, Brooklyn</title>
+                <meta name="description" content="Explore available luxury One and Two-bedroom 
+apartments at 1946 Ocean. Live in the heart of Midwood, Brooklyn, with 
+sophisticated amenities and elegant living spaces." />
+            </Helmet>
         <Header/>
         <Hero data={heroData} />
         <BannerContent data={bannerContentData} />
