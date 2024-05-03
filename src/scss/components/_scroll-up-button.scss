@@ -1,0 +1,15 @@
+.up-arrow-circle{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #C29F7B;
+    border-radius: 50%;
+    &:hover{
+        background-color: #C29F7B;
+    }
+}

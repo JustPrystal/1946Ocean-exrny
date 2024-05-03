@@ -200,14 +200,16 @@
                 display: flex;
                 align-items: center;
                 text-decoration: none;
+                transition: 0.3s ease-in-out;
+                color: #231C1E;
+                &:hover{
+                    transform: translateY(-5px);
+                    text-decoration: underline;
+                }
                 .view-availability{
                     font-size: 31px;
                     font-family: 'Bentago';
-                    color: #231C1E;
                     margin-right: 10px;
-                    &:hover{
-                        text-decoration: underline;
-                    }
                     @include responsive(xl){
                         font-size: 26px;
                     }
@@ -221,8 +223,10 @@
                 }
                 .arrow{
                     width: 26px;
+                    height: 26px;
                     @include responsive(md){
                         width: 22px;
+                        height: 22px;
                     }
                 }
             }

@@ -71,11 +71,12 @@
                             font-size: 28px;
                         }
                     }
-                    p{
+                    a{
                         font-size: 16px;
                         font-family: 'Charlevoix Pro';
                         max-width: 130px;
-
+                        color: #fff;
+                        text-decoration: none;
                         @include responsive(sm){
                             font-size: 14px;
                         }
