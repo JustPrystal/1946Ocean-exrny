@@ -1,5 +1,4 @@
 const Table = ({data}) => {
-    console.log(data)
     return ( 
         <>  
             <div className="table">

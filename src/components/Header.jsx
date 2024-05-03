@@ -1,37 +1,77 @@
-import menuIcon from '../assets/images/menu.svg';
-import cross from '../assets/images/cross.svg';
 import headerLogo from '../assets/images/header_logo.png';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
-
+const links = [
+  {
+    link : "/",
+    linkText : "Home"
+  },
+  {
+    link : "/residences",
+    linkText : "Residences"
+  },
+  {
+    link : "/amenities",
+    linkText : "Amenities"
+  },
+  {
+    link : "/availabilities",
+    linkText : "Availabilities"
+  },
+  {
+    link : "/neighborhood",
+    linkText : "Neighborhood"
+  },
+  {
+    link : "/contact",
+    linkText : "Contact"
+  },
+];
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState('false');
+  const [headerClasses, setHeaderClasses] = useState([])
+
   const handleToggle = ()=>{
     setHeaderToggle(headerToggle?false:true)
+    if(headerToggle){
+      setHeaderClasses(headerClasses.filter(className => className !== 'close'));
+    }else{
+      setHeaderClasses([...headerClasses, 'close']);
+    }
   }
-  document.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector('header');
+      if (window.scrollY >= 100 && !header.classList.contains('scrolled')) {
+        setHeaderClasses([...headerClasses, 'scrolled']);
+      } else if (window.scrollY < 100 && header.classList.contains('scrolled')) {
+        setHeaderClasses(headerClasses.filter(className => className !== 'scrolled'));
+      }
+    };
 
-    if (window.scrollY > 0) {
-      header.classList.add('scrolled');
-    }
-    else{
-      header.classList.remove('scrolled');
-    }
-  });
-  
+    document.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to remove the event listener when component unmounts
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, [headerClasses]);
+  // (headerToggle ? "" : "closed")
   return (
-    <header className={(headerToggle ? "" : "closed")}>
+    <header className={headerClasses.join(' ')}>
       <div className="header-wrap">
         
-        <div className="links">
-          <Link to="/" className="link">Home</Link>
-          <Link to="/residences" className="link">Residences</Link>
-          <Link to="/amenities" className="link">Amenities</Link>
-          <Link to="/availabilities" className="link">Availabilities</Link>
-          <Link to="/neighborhood" className="link">Neighborhood</Link>
-          <Link to="/contact" className="link">Contact</Link>
+        <div className="links" id="header-links">
+          {
+            links.map((link, index)=>{
+              return (<NavLink className={({ isActive }) =>( isActive ? "link active" : "link")} 
+              to={link.link} 
+              key={index}>
+                {link.linkText}
+              </NavLink>)
+            })
+          }
         </div>
         <div className="logo-wrap">
           <Link to="/">
@@ -42,8 +82,10 @@ const Header = () => {
           <Link to="/contact" >Schedule A Tour</Link>
         </div>
         <div className="menu-button" onClick={handleToggle}>
-          <img className="hamburger" src={menuIcon} alt="" />
-          <img className="cross" src={cross} alt="" />
+          <div className="menu-icon">
+            <span></span>
+            <span></span>
+          </div>
           <span>Menu</span>
         </div>
       </div>
