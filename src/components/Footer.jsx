@@ -78,9 +78,7 @@ const Footer = () => {
                         <div className="content">
                             <div className="location">
                                 <h4 className="heading"> Location </h4>
-                                <a href="https://www.google.com/maps/place/1946+Ocean+Ave,+Brooklyn,+NY+11230,+USA/@40.6144619,-73.9571784,17z/data=!3m1!4b1!4m6!3m5!1s0x89c244be658af2bb:0x9c9aa5dbe4865cf9!8m2!3d40.6144579!4d-73.9546035!16s%2Fg%2F11bw402hp3?entry=ttu">
-                                    1946 Ocean Ave, Brooklyn,<br/> NY 11230, USA
-                                </a>
+                                <p> 1946 Ocean Ave, Brooklyn, NY, 11230 </p>
                             </div>
                             <div className="menu">
                                 <h4 className="heading"> Menu </h4>
