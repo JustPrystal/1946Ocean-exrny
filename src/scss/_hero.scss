@@ -1,14 +1,5 @@
 .hero{
     background-image: linear-gradient(360deg, #5E7584 0%, #F4E9D701 25%);
-    // @include responsive(md){
-    //     // background-image: unset;
-    //     // background: linear-gradient(90deg, #2D4241 0%, #F2295B01 15%),
-    //                 // linear-gradient(270deg, #2D4241 0%, #F2295B01 15%),
-    //                 // linear-gradient(360deg, #2D4241 0%, #F2295B01 24%);
-    // }
-    // @include responsive(sm){
-    //     // background: linear-gradient(360deg, #2D4241 0%, #F2295B01 24%);
-    // }
     .background-image{
         position: fixed;
         top: 0;
