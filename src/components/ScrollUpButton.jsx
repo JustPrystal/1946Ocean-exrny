@@ -5,9 +5,9 @@ const ScrollUpButton = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     return ( 
-        <a className="up-arrow-circle" onClick={scrollUp}>
+        <div className="up-arrow-circle" onClick={scrollUp}>
             <img className="scroll-up-button" src={UpArrow} alt="" />
-        </a>
+        </div>
     );
 }
  
