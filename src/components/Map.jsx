@@ -4,9 +4,7 @@ import mapLogo from '../assets/images/mapLogo.png';
 
 const MapContainer = () => {
     return ( 
-        <section class="map" id="map" style={{
-            "height" : "600px" 
-        }}>
+        <section class="map" id="map">
           <Map
             mapboxAccessToken="pk.eyJ1IjoiZXhybGFuZGluZ3MiLCJhIjoiY2x2Ym1paXF4MDRqNzJrbGhldDdzbzY2ZiJ9._NRv4-LW-AwL86_e3jKrLg"
             mapLib={import('mapbox-gl')}
