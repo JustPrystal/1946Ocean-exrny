@@ -73,7 +73,9 @@ const Footer = () => {
                 <div className="inner">
                     <div className="footer-content">
                         <div className="logo-wrap">
-                            <img className="logo" src={Logo} alt="logo" />
+                            <a href="/">
+                                <img className="logo" src={Logo} alt="logo" />
+                            </a>
                         </div>
                         <div className="content">
                             <div className="location">
@@ -99,7 +101,9 @@ const Footer = () => {
                         </div>
                         <div className="logos">
                             <div className="logo-wrap exr">
-                                <img src={EXR} alt="exr logo" />
+                                <a href="https://www.exrny.com/?utm_source=https%3A%2F%2F1946ocean.com%2F&utm_medium=referral&utm_campaign=landing_pages">
+                                    <img src={EXR} alt="exr logo" />
+                                </a>
                             </div>
                             <div className="logo-wrap safe-housing">
                                 <img src={SafeHousing} alt="Safe-housing logo" />

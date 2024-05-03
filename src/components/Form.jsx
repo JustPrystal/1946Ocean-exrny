@@ -73,7 +73,7 @@ const Form = () => {
                         <p className="txt" data-aos="fade-left">
                             Looking for a link to apply?
                         </p>
-                        <a href="https://www.exrny.com/apply?utm_source=website&utm_medium=referral&utm_campaign=apply" className="button"> 
+                        <a href="https://www.exrny.com/apply?utm_source=https%3A%2F%2F1946ocean.com%2F&utm_medium=referral&utm_campaign=landing_pages" className="button"> 
                             Click here 
                         </a>
                     </div>

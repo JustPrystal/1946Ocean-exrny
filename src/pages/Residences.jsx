@@ -4,17 +4,17 @@ import QuickNav from '../components/QuickNav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 //1 bedroom slider images
-import slider1image1 from "../assets/images/residences/1 Bedroom/1946-Ocean-plans-and-renderings-14-scaled.jpg";
-import slider1image2 from "../assets/images/residences/1 Bedroom/1946-Ocean-plans-and-renderings-15-scaled.jpg";
-import slider1image3 from "../assets/images/residences/1 Bedroom/img-2.png";
+import slider1image1 from "../assets/images/residences/1 Bedroom/slider-image-1.png";
+import slider1image2 from "../assets/images/residences/1 Bedroom/slider-image-2.png";
+import slider1image3 from "../assets/images/residences/1 Bedroom/slider-image-3.png";
 //1 bedroom slider images
-import slider2image1 from "../assets/images/residences/2 Bedroom/1946-Ocean-plans-and-renderings-14-scaled.jpg";
-import slider2image2 from "../assets/images/residences/2 Bedroom/1946-Ocean-plans-and-renderings-15-scaled.jpg";
-import slider2image3 from "../assets/images/residences/2 Bedroom/img-2.png";
+import slider2image1 from "../assets/images/residences/2 Bedroom/slider-image-1.png";
+import slider2image2 from "../assets/images/residences/2 Bedroom/slider-image-2.png";
+import slider2image3 from "../assets/images/residences/2 Bedroom/slider-image-3.png";
 //1 bedroom slider images
-import slider3image1 from "../assets/images/residences/3 Bedroom/1946-Ocean-plans-and-renderings-14-scaled.jpg";
-import slider3image2 from "../assets/images/residences/3 Bedroom/1946-Ocean-plans-and-renderings-15-scaled.jpg";
-import slider3image3 from "../assets/images/residences/3 Bedroom/img-2.png";
+import slider3image1 from "../assets/images/residences/3 Bedroom/slider-image-1.png";
+import slider3image2 from "../assets/images/residences/3 Bedroom/slider-image-2.png";
+import slider3image3 from "../assets/images/residences/3 Bedroom/slider-image-3.png";
 
 import Hero from "../components/Hero";
 import TwoColumnSlider from "../components/TwoColumnSlider";
