@@ -24,7 +24,6 @@ const Contact = () => {
                 <meta name="description" content="Looking for your next home in Brooklyn? Contact us at 
 1946 Ocean for more details about our luxury apartments and to discover 
 why we're Midwood’s top choice for upscale living." />
-                {/* Add other meta tags as needed */}
             </Helmet>
             <Header/>
             <Hero data={heroData} />

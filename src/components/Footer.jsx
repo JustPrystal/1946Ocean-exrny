@@ -122,7 +122,6 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            {console.log(modalContent)}
             {
                 modalShow && <Modal data={modalContent} setter={setModalShow}/>
             }
