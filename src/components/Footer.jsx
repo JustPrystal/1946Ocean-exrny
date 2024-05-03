@@ -37,7 +37,7 @@ const Footer = () => {
 
     const showModal = (e) => {
         for (let i = 0; i < modalData.length; i++) {
-            if(e.target.className == modalData[i].slug){
+            if(e.target.className === modalData[i].slug){
                 setModalContent(modalData[i].content)
             }
         }

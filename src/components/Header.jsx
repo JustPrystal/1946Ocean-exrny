@@ -59,7 +59,7 @@ const Header = () => {
   }, [headerClasses]);
   // (headerToggle ? "" : "closed")
   return (
-    <header className={headerClasses.join(' ')}>
+    <header id="header" className={headerClasses.join(' ')}>
       <div className="header-wrap">
         
         <div className="links" id="header-links">
