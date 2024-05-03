@@ -18,7 +18,7 @@ const MapContainer = () => {
             <Marker longitude="-73.9546035" latitude="40.6144579" anchor="bottom">
               <img src={mapLogo} alt="" />
             </Marker>  
-          </Map>;
+          </Map>
         </section>
      );
 }

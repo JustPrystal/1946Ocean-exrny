@@ -143,6 +143,7 @@ header{
             }
         }
         .menu-button{
+            user-select: none;
             display: none;
             @include responsive(lg){
                 display: flex;
@@ -151,6 +152,7 @@ header{
                 position: relative;
                 z-index: 99;
                 span{
+                    user-select: none;
                     font-size:18px;
                     cursor: pointer;
                     color: #fff;
