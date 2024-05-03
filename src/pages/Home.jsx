@@ -7,7 +7,6 @@ import TwoColumn from '../components/TwoColumn';
 import QuickNav from '../components/QuickNav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ScrollUpButton from '../components/ScrollUpButton';
 import { Helmet } from 'react-helmet';
 
 let heroData = {
@@ -76,7 +75,6 @@ const Home = () => {
             }
             <QuickNav links={QuickLinks}/>
             <Footer />
-            <ScrollUpButton />
         </>
      );
 }

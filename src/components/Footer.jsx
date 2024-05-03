@@ -2,6 +2,7 @@ import Logo from '../assets/images/logo-blue-with-white-letters.png';
 import EXR from '../assets/images/exr.png';
 import SafeHousing from '../assets/images/equal-housing-opportunity.png';
 import Modal from './Modal';
+import ScrollUpButton from './ScrollUpButton';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -112,7 +113,7 @@ const Footer = () => {
                     </div>
                     <div className="lower-wrap">
                         <div className="copyright">
-                            <p> ©Copyright 2024 EXR. All rights reserved. Website by OnelineWeb. </p>
+                            <p>©Copyright 2024 EXR. All rights reserved.</p>
                         </div>
                         <ul className="extra-links">
                             <li className="link" onClick={showModal}> <p className='fair-housing'> Fair Housing Statement </p> </li>
@@ -125,6 +126,7 @@ const Footer = () => {
             {
                 modalShow && <Modal data={modalContent} setter={setModalShow}/>
             }
+            <ScrollUpButton />
         </>
     );
 }
