@@ -1,3 +1,5 @@
+/*global fbq*/
+
 import { useState } from 'react';
 import FormImage from '../assets/images/contact/contact-image-3.png';
 import axios from 'axios';
@@ -22,6 +24,7 @@ const Form = () => {
         axios.post('https://www.exrny.com/api/leads/', data).finally(() => {
             e.target.reset()
             setFormSent(true);
+            fbq('trackCustom', 'contactFormSubmit');
         })
     }
     return (
