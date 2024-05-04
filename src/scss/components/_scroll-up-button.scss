@@ -10,6 +10,16 @@
     border: 1px solid #C29F7B;
     border-radius: 50%;
     z-index: 120;
+    transition: 300ms;
+    opacity: 0;
+    pointer-events: none;
+    &.scrolled{
+        opacity: 1;
+        pointer-events: all;
+        @include responsive(sm){
+            display: none;
+        }
+    }
     &:hover{
         background-color: #C29F7B;
     }
