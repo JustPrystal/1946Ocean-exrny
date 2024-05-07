@@ -3,30 +3,40 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const links = [
-  {
-    link : "/",
-    linkText : "Home"
-  },
-  {
-    link : "/residences",
-    linkText : "Residences"
-  },
-  {
-    link : "/amenities",
-    linkText : "Amenities"
-  },
-  {
-    link : "/availabilities",
-    linkText : "Availabilities"
-  },
-  {
-    link : "/neighborhood",
-    linkText : "Neighborhood"
-  },
-  {
-    link : "/contact",
-    linkText : "Contact"
-  },
+  [
+    {
+      link : "/",
+      linkText : "Home"
+    },
+    {
+      link : "/residences",
+      linkText : "Residences"
+    },
+    {
+      link : "/amenities",
+      linkText : "Amenities"
+    }
+  ],
+  [
+    {
+      link : "/",
+      linkImage : headerLogo
+    }
+  ],
+  [
+    {
+      link : "/availabilities",
+      linkText : "Availabilities"
+    },
+    {
+      link : "/neighborhood",
+      linkText : "Neighborhood"
+    },
+    {
+      link : "/contact",
+      linkText : "Contact"
+    }
+  ]
 ];
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState('false');
@@ -64,12 +74,33 @@ const Header = () => {
         
         <div className="links" id="header-links">
           {
-            links.map((link, index)=>{
-              return (<NavLink className={({ isActive }) =>( isActive ? "link active" : "link")} 
-              to={link.link} 
-              key={index}>
-                {link.linkText}
-              </NavLink>)
+            links.map((linkGroup, index)=>{
+              return (
+                <div className={"linkgroup" + index}>
+                  {
+                    linkGroup.map((link,childIndex)=>{
+                      if (link.linkImage) {
+                        return(
+                          <NavLink 
+                            to={link.link} 
+                            key={childIndex}>
+                            <img src={link.linkImage} alt="logo" />
+                          </NavLink>
+                        )
+                      } 
+                      else {
+                        return(
+                          <NavLink className={({ isActive }) =>( isActive ? "link active" : "link")} 
+                            to={link.link} 
+                            key={childIndex}>
+                            {link.linkText}
+                          </NavLink>
+                        )
+                      }
+                    })
+                  }
+                </div>
+              )
             })
           }
         </div>
@@ -77,9 +108,6 @@ const Header = () => {
           <Link to="/">
             <img className="logo" src={headerLogo} alt=""/>
           </Link>
-        </div>
-        <div className="schedule-button">
-          <Link to="/contact" >Schedule A Tour</Link>
         </div>
         <div className="menu-button" onClick={handleToggle}>
           <div className="menu-icon">

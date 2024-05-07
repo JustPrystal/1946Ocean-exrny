@@ -51,12 +51,10 @@ header{
             padding: 30px;
         }
         .links{
-            width: calc(50% - 81px);
-            padding-right: 80px;
             transition: 300ms ease-in-out;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
+            width: 100%;
             @include responsive(lg){
                 position: absolute;
                 inset: 0;
@@ -65,41 +63,85 @@ header{
                 height: 100vh;
                 flex-direction: column;
                 align-items: flex-start; 
-                padding-right: 0px;
                 width: unset;
                 padding-top: 150px;
             }
-            .link{
-                color: #F4E9D7;
-                cursor: pointer;
-                text-transform: uppercase;
-                font-family: 'Charlevoix Pro';
-                padding: 15px 0px;
-                font-weight: 900;
-                text-decoration: none;
-                margin-right: 30px;
-                &.active{
-                    color: #fff;
-                    text-decoration: underline;
-                }
-                &:hover{
-                    transition: color;
-                    color: #fff;
-                    text-decoration: underline;
-                    transition: 0.3s ease;
-                }
-                &:last-child{
-                    margin-right: 0px;
-                }
+            .linkgroup0,.linkgroup2{
+                width: calc(50% - 69px);
+                display: flex;
+                align-items: center;
+                gap: 54px;
                 @include responsive(lg){
-                    margin-right: 0px;
-                    margin-left: 32px;
-                    font-size: 30px;
-                    color: white;
-                    font-family: 'Bentago';
-                    text-transform: capitalize;
-                    font-weight: normal;
-                    padding: 12px 0px;
+                    width: unset;
+                    flex-direction: column;
+                    align-items: unset;
+                    gap: unset;
+                }
+                .link{
+                    color: #F4E9D7;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    font-family: 'Charlevoix Pro';
+                    font-size: 18px;
+                    font-weight: 900;
+                    text-decoration: none;
+                    transition: color 300ms ease;
+                    &.active{
+                        color: #fff;
+                        text-decoration: underline;
+                    }
+                    &:hover{
+                        color: #fff;
+                        text-decoration: underline;
+                    }
+                    @include responsive(xl){
+                        font-size: 16px;
+                    }
+                    @include responsive(lg){
+                        margin-right: 0px;
+                        margin-left: 32px;
+                        font-size: 30px;
+                        color: white;
+                        font-family: 'Bentago';
+                        text-transform: capitalize;
+                        font-weight: normal;
+                        padding: 12px 0px;
+                    }
+                }
+            }
+            .linkgroup2{
+                justify-content: flex-end;
+                @include responsive(lg){
+                    justify-content: flex-start;
+                }
+                a{
+                    &:last-child{
+                        padding: 12px 22px;
+                        border-radius: 32px;
+                        background-color: #fff;
+                        color: #5E7584;
+                        @include responsive(lg){
+                            padding: 12px 0px;
+                            border-radius: unset;
+                            background-color: unset;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .linkgroup1{
+                a{
+                    cursor: pointer;
+                    img{
+                        width: 134px;
+                        mix-blend-mode: screen;
+                        @include responsive(xl){
+                            width: 125px;
+                        }
+                        @include responsive(lg){
+                            display: none;
+                        }
+                    }
                 }
             }
         }
@@ -109,36 +151,14 @@ header{
                 .logo{
                     width: 158px;
                     mix-blend-mode: screen;
+                    display: none;
                     @include responsive(xl){
                         width: 125px;
                     }
                     @include responsive(lg){
+                        display: block;
                         width: 72px;
                     }
-                }
-            }
-        }
-        .schedule-button{
-            width: calc(50% - 81px);
-            display: flex;
-            justify-content: flex-end;
-            @include responsive(lg){
-                display: none;
-            }
-            a{
-                color: #fff;
-                cursor: pointer;
-                font-family: 'Charlevoix Pro';
-                text-transform: uppercase;
-                text-decoration: none;
-                border-style: solid;
-                border-width: 1px;
-                border-color: #fff;
-                padding: 20px 30px;
-                &:hover{
-                    transition: 0.3s ease;
-                    color: #F4E9D7;
-                    border-color: #F4E9D7;
                 }
             }
         }
