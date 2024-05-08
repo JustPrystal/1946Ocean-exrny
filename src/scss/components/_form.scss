@@ -38,6 +38,7 @@
                 input, select, textarea{
                     height: 66px;
                     width: 100%;
+                    text-align: center;
                     border-radius: 3px;
                     background-color: #f4e9d7;
                     margin-bottom: 20px;
@@ -50,6 +51,10 @@
                         outline: none;
                         outline-offset: 0;
                     }
+                }
+                .date{
+                    min-width: calc(100% - 18px);
+                    color: rgba(0, 0, 0, 0.6);
                 }
                 textarea{
                     padding: 20px 30px;
@@ -71,11 +76,42 @@
                         -moz-appearance: none; 
                         /* for Safari, Chrome, Opera */ 
                         -webkit-appearance: none;
-                    } 
+                        color: rgba(0, 0, 0, 0.5);
+                        &::-ms-expand{
+                            opacity: 0;
+                        } 
+                    }
+                    .layout{
+                        text-align-last: center;
+                        option {
+                            text-align: center;
+                            &:checked{
+                                color: rgba(0, 0, 0, 0.6);
+                            }
+                            &::placeholder{
+                                color: rgba(0, 0, 0, 0.6);
+                            }
+                            
+                        }
+                    }
                 }
                 input[type="date"]::-webkit-inner-spin-button,
                 input[type="date"]::-webkit-calendar-picker-indicator {
                     cursor: pointer;
+                    -webkit-appearance: none;
+                    opacity: 0;
+                }
+                
+                .date-wrap{
+                    position: relative;
+                    svg{
+                        width: 20px;
+                        right: 30px;
+                        pointer-events: none;
+                        top: calc(50% - 10px);
+                        transform: translateY(-50%);
+                        position: absolute;
+                    }
                 }
                 .button{
                     background-color: #996936;

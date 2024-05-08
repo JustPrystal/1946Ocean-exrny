@@ -42,12 +42,16 @@
                 align-items: center;
 
                 @include responsive(sm){
-                    flex-direction: column;
                     gap: 50px;
+                    justify-content: space-between;
                     align-items: flex-start;
                     width: 100%;
                     margin-top: 50px;
                     order: 3;
+                }
+                @include responsive(xs){
+                    flex-direction: column;
+                    align-items: center;
                 }
 
                 .location{
@@ -60,6 +64,9 @@
                         margin: 0;    
                         gap: 20px;
                     }
+                    @include responsive(xs){
+                        align-items: center;
+                    }
                     
                     .heading{
                         font-size: 39px;
@@ -67,8 +74,8 @@
                         font-family: 'Bentago';
                         font-weight: 500;
 
-                        @include responsive(sm){
-                            font-size: 28px;
+                        @include responsive(xs){
+                            font-size: 32px;
                         }
                     }
                     a{
@@ -77,26 +84,34 @@
                         max-width: 130px;
                         color: #fff;
                         text-decoration: none;
-                        @include responsive(sm){
+
+                        @include responsive(xs){
+                            text-align: center;
                             font-size: 14px;
                         }
                     }
                 }
                 .menu{
-                    margin-bottom: auto;
+                    // margin-bottom: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
 
                     @include responsive(sm){
-                        margin: 0;    
+                        margin: 0;  
+                        text-align: end;  
+                    }
+                    @include responsive(xs){
+                        text-align: center;
                     }
 
                     .heading{
                         font-size: 39px;
                         font-family: 'Bentago';
                         font-weight: 500;
-                        margin-bottom: 20px;
 
-                        @include responsive(sm){
-                            font-size: 28px;
+                        @include responsive(xs){
+                            font-size: 32px;
                         }
                     }
                     .links{
@@ -106,7 +121,7 @@
                             margin-bottom: 8px;
                             font-size: 16px;
 
-                            @include responsive(sm){
+                            @include responsive(xs){
                                 font-size: 14px;
                             }
 

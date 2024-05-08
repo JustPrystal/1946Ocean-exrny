@@ -5,6 +5,7 @@ import Modal from './Modal';
 import ScrollUpButton from './ScrollUpButton';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 const links = [
     {
@@ -74,9 +75,9 @@ const Footer = () => {
                 <div className="inner">
                     <div className="footer-content">
                         <div className="logo-wrap">
-                            <a href="/">
+                            <Link to="/">
                                 <img className="logo" src={Logo} alt="logo" />
-                            </a>
+                            </Link>
                         </div>
                         <div className="content">
                             <div className="location">
