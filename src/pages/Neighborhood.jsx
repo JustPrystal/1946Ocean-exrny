@@ -7,6 +7,9 @@ import BannerContent from '../components/BannerContent';
 import TwoColumn from '../components/TwoColumn';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet';
+import { useState } from 'react';
+
 //twocolumn images
 import parkImage from '../assets/images/Neighborhood/TwoColumn/brooklyn-marine-park-2048x2034.png';
 import collegeImage from '../assets/images/Neighborhood/TwoColumn/brooklyn-colege.png';
@@ -16,7 +19,7 @@ import shoppingImage from '../assets/images/Neighborhood/TwoColumn/shopping.png'
 import libraryImage from '../assets/images/Neighborhood/TwoColumn/library-1-2012x2048.png';
 import busImage from '../assets/images/Neighborhood/TwoColumn/bus.png';
 import trainImage from '../assets/images/Neighborhood/TwoColumn/train.png';
-import { Helmet } from 'react-helmet';
+import ScrollToTop from '../components/ScrollToTop';
 
 
 let heroData = {
@@ -32,19 +35,47 @@ let MaplegendData = [
     {
         heading : "Points of Interest",
         list : [
-            "Brooklyn Marine Park",
-            "Brooklyn College",
-            "New York community hospital",
-            "Restaurants on Kings highway",
-            "Shopping on King Highway",
-            "Public library",
+            {
+               place : "Brooklyn Marine Park",
+               coords : [-73.9353743, 40.6084001]
+            },
+            {
+               place : "Brooklyn College",
+               coords : [-73.951458, 40.6308935]
+            },
+            {
+               place : "Maimonides Midwood Community Hospital",
+               coords : [-73.9484207, 40.6139406]
+            },
+            {
+               place : "Restaurants on Kings Highway",
+               coords : [-73.957959, 40.618055]
+            },
+            {
+               place : "Congregation Beth Abraham, Rabbi Dov Oshry",
+               coords : [-73.9573565, 40.6127084]
+            },
         ]
     },
     {
         heading : "Transportation",
         list : [
-            "Express bus to the city",
-            "B & Q train",
+            {
+                place : "Kings Highway Subway Station",
+                coords : [-73.9578112, 40.6086735]
+            },
+            {
+                place : "Ocean Av/Av O",
+                coords : [-73.954018, 40.6086735]
+            },
+            {
+                place : "Ocean Ave/Ave N",
+                coords : [-73.954796, 40.616333]
+            },
+            {
+                place : "B & Q Line",
+                coords : [-73.9578112, 40.6086735]
+            },
         ]
     }
 ]
@@ -134,14 +165,21 @@ let QuickLinks = {
 }
 
 const Neighborhood = () => {
+    const [poi, setPoi] = useState([])
+    const [poiTitle, setPoiTitle] = useState("")
+    const [showPopup, setShowPopup] = useState(false);
+    const [flyData, setFlyData] = useState({
+        point : "",
+        condition : false 
+    });
     return ( 
         <>
+            <ScrollToTop />
             <Helmet>
                 <title>Discover Midwood – Brooklyn’s Residential Charm</title>
                 <meta name="description" content="Learn about life in Midwood, Brooklyn at 1946 Ocean. 
 Our luxury apartment complex is ideally located to blend modern living with 
 the charm and convenience of a Brooklyn neighborhood." />
-                {/* Add other meta tags as needed */}
             </Helmet>
             <Header/>
             <Hero data={heroData} />
@@ -151,9 +189,9 @@ the charm and convenience of a Brooklyn neighborhood." />
                     return <TwoColumn key={index} data={section} />;
                 })
             }
-            <MapContainer />
-            <MapLegend data={MaplegendData} />
-            <QuickNav links={QuickLinks}/>
+            <MapContainer title={poiTitle} coords={poi} showPopup={showPopup} flyData={flyData} setFlyData={setFlyData}/>
+            <MapLegend data={MaplegendData} setPoi={setPoi} setFlyData={setFlyData} flyData={flyData} setPoiTitle={setPoiTitle} setShowPopup={setShowPopup}/>
+            <QuickNav links={QuickLinks} />
             <Footer/>
         </>
      );

@@ -5,6 +5,7 @@ import BannerContent from "../components/BannerContent";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Helmet } from "react-helmet";
+import ScrollToTop from "../components/ScrollToTop";
 
 let heroData = {
     backgroundImage : bannerImage,
@@ -19,6 +20,7 @@ let bannerContentData = {
 const Contact = () => {
     return ( 
         <>
+            <ScrollToTop />
             <Helmet>
                 <title>Contact us | 1946 Ocean Apartments, Midwood, Brooklyn</title>
                 <meta name="description" content="Looking for your next home in Brooklyn? Contact us at 

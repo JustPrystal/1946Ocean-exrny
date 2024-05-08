@@ -45,6 +45,7 @@ header{
     .header-wrap{
         padding: 30px 40px;
         display: flex;
+        z-index: 1000;
         justify-content: space-between;
         align-items: center;
         @include responsive(xl){
@@ -126,6 +127,32 @@ header{
                             background-color: unset;
                             color: #fff;
                         }
+                        &.active{
+                            color: #FFF;
+                            background-color: #5E7584;
+                            text-decoration: none;
+                            &:hover{
+                                color: #5E7584;
+                                background-color: #fff;
+                                text-decoration: none;
+                            }
+                            @include responsive(lg){
+                                text-decoration: underline;
+                                &:hover{
+                                    text-decoration: underline;
+                                    background-color: unset;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        &:hover{
+                            color: #FFF;
+                            background-color: #5E7584;
+                            text-decoration: none;
+                            @include responsive(lg){
+                                text-decoration: underline;
+                            }
+                        }
                     }
                 }
             }
@@ -165,6 +192,7 @@ header{
         .menu-button{
             user-select: none;
             display: none;
+            cursor: pointer;
             @include responsive(lg){
                 display: flex;
                 align-items: center;
@@ -174,7 +202,6 @@ header{
                 span{
                     user-select: none;
                     font-size:18px;
-                    cursor: pointer;
                     color: #fff;
                     font-family: 'Charlevoix Pro';
                     text-transform: uppercase;

@@ -6,6 +6,7 @@ import QuickNav from '../components/QuickNav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Availabilities = () => {
     let TableData = [
@@ -93,6 +94,7 @@ const Availabilities = () => {
     }
     return ( 
     <>
+        <ScrollToTop />
             <Helmet>
                 <title>Available Luxury Apartments at 1946 Ocean, Midwood, Brooklyn</title>
                 <meta name="description" content="Explore available luxury One and Two-bedroom 

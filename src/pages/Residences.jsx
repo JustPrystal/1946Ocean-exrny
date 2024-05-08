@@ -19,6 +19,7 @@ import slider3image3 from "../assets/images/residences/3 Bedroom/slider-image-3.
 import Hero from "../components/Hero";
 import TwoColumnSlider from "../components/TwoColumnSlider";
 import { Helmet } from "react-helmet";
+import ScrollToTop from "../components/ScrollToTop";
 
 let heroData = {
     backgroundImage : bannerImage,
@@ -79,6 +80,7 @@ let residenceData = [
 const Residences = () => {
     return ( 
         <>
+            <ScrollToTop />
             <Helmet>
                 <title>Brooklyn Luxury Apartments for Rent at 1946 Ocean, Midwood</title>
                 <meta name="description" content="Experience the height of luxury in Midwood, Brooklyn 

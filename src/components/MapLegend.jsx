@@ -1,4 +1,19 @@
-const MapLegend = ({data}) => {
+const MapLegend = ({data, setPoi, setShowPopup, setPoiTitle, setFlyData, flyData}) => {
+    const setPoiCoords = (coords) => {
+        setPoi(coords)
+    }
+    const setFly = (name) => {
+        setFlyData({
+            condition : flyData.point.name === name ? false : true,
+            point: {name},
+        })
+    }
+    const setTitle = (name) => {
+        setPoiTitle(name)
+    }
+    const showPopup = () => {
+        setShowPopup(true)
+    }
     return ( 
         <section className="maplegend">
             <div className="inner">
@@ -12,8 +27,22 @@ const MapLegend = ({data}) => {
                                     {
                                         legendItem.list.map((listItem, itemIndex)=>{
                                             return (
-                                                <p className="list-item" key={itemIndex}>
-                                                    {listItem}
+                                                <p className="list-item" key={itemIndex} 
+                                                    onClick={
+                                                        () => {
+                                                            setPoiCoords(listItem.coords);
+                                                            setTitle(listItem.place);
+                                                            showPopup();
+                                                            setFly(listItem.place)
+                                                            const mapElement = document.getElementById("map");
+                                                            const topOffset = mapElement.getBoundingClientRect().top + window.scrollY;
+                                                            window.scrollTo({
+                                                                top: topOffset,
+                                                                behavior: "smooth" // Optionally, use smooth scrolling
+                                                            });
+                                                        }
+                                                    }>
+                                                    {listItem.place}
                                                 </p>
                                             )
                                         })

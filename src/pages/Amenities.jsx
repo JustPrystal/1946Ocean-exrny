@@ -15,6 +15,7 @@ import QuickNav from '../components/QuickNav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Amenities = () => {
     let heroData = {
@@ -113,6 +114,7 @@ const Amenities = () => {
     
     return ( 
         <>
+            <ScrollToTop />
             <Helmet>
                 <title>Exclusive Amenities |1946 Ocean, Midwood, Brooklyn</title>
                 <meta name="description" content="1946 Ocean sets the standard with its upscale 

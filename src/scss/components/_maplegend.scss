@@ -64,9 +64,14 @@
             .content{
                 .list-item{
                     font-size: 18px;
+                    cursor: pointer;
                     font-family: 'Charlevoix Pro';
                     color: #231c1e;
                     margin-bottom: 20px;
+                    user-select: none;
+                    &:hover{
+                        color: #996936;
+                    }
 
                     @include responsive(sm){
                         font-size: 16px;   
