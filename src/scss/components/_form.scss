@@ -51,10 +51,14 @@
                         outline: none;
                         outline-offset: 0;
                     }
+                    &::placeholder{
+                        color: rgba(0, 0, 0);
+                    }
                 }
                 .date{
                     min-width: calc(100% - 18px);
-                    color: rgba(0, 0, 0, 0.6);
+                    color: rgba(0, 0, 0);
+                    text-align: center;
                 }
                 textarea{
                     padding: 20px 30px;
@@ -76,7 +80,7 @@
                         -moz-appearance: none; 
                         /* for Safari, Chrome, Opera */ 
                         -webkit-appearance: none;
-                        color: rgba(0, 0, 0, 0.5);
+                        color: rgba(0, 0, 0);
                         &::-ms-expand{
                             opacity: 0;
                         } 
@@ -86,12 +90,14 @@
                         option {
                             text-align: center;
                             &:checked{
-                                color: rgba(0, 0, 0, 0.6);
+                                color: rgba(0, 0, 0);
                             }
                             &::placeholder{
-                                color: rgba(0, 0, 0, 0.6);
+                                color: rgba(0, 0, 0);
                             }
-                            
+                            &::selection{
+                                color: rgba(0, 0, 0);
+                            }
                         }
                     }
                 }
@@ -101,7 +107,44 @@
                     -webkit-appearance: none;
                     opacity: 0;
                 }
-                
+                // input[type="date"]::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+                // input[type="date"]::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+                // input[type="date"]::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+                //     // color: transparent;
+                // }
+
+                //HIDE THE DEFAULT PLACEHOLDER
+                input[type=date]:required:invalid::-webkit-datetime-edit {
+                    color: transparent;
+                    text-align: center;
+                }
+                input[type=date]:focus::-webkit-datetime-edit {
+                    color: black !important;
+                }
+                // ::-webkit-datetime-edit { padding: 1em; }
+                // ::-webkit-datetime-edit-fields-wrapper { display: none;}
+                // ::-webkit-datetime-edit-text { display: none; }
+                // ::-webkit-datetime-edit-month-field { display: none; }
+                // ::-webkit-datetime-edit-day-field { display: none; }
+                // ::-webkit-datetime-edit-year-field { display: none; }
+                // ::-webkit-inner-spin-button { display: none; }
+                // ::-webkit-calendar-picker-indicator { background: transparent; }
+
+                // TO ADD THE PLACEHOLDER
+                input[type="date"]::before{
+                    color: rgb(0, 0, 0,);
+                    content: attr(placeholder);
+                    top: calc(50% - 10px);
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                input[type="date"]:focus::before{
+                    content: "" !important;
+                    display: none;
+                }
+
+
                 .date-wrap{
                     position: relative;
                     svg{
