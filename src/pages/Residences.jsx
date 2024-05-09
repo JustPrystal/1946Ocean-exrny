@@ -28,7 +28,7 @@ let heroData = {
 }
 let bannerContentData = {
     heading: "Experience Luxury Living in Brooklyn",
-    description: "Nestled within the vibrant neighborhood of Midwood, Brooklyn, 946 Ocean Avenue epitomizes luxury living at its finest. These opulent apartments offer a seamless blend of modern elegance and urban convenience."
+    description: "Nestled within the vibrant neighborhood of Midwood, Brooklyn, 1946 Ocean Avenue epitomizes luxury living at its finest. These opulent apartments offer a seamless blend of modern elegance and urban convenience."
 }
 let QuickLinks = {
     prev : {
