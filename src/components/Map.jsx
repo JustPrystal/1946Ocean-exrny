@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Map, {Marker} from 'react-map-gl';
-import {MapRef} from 'react-map-gl';
-import mapLogo from '../assets/images/mapLogo.png';
+import mapLogo from '../assets/images/mapLogo.svg';
 import MapPopup from './MapPopup';
 
 const MapContainer = ({coords, showPopup, title, flyData, setFlyData}) => {
 
   const mapRef = useRef(null);
 
-  const [viewport, setViewport] = useState({
+  const [viewport] = useState({
     longitude: -73.9546035,
     latitude: 40.6144579,
     zoom: 14,
@@ -41,7 +40,7 @@ const MapContainer = ({coords, showPopup, title, flyData, setFlyData}) => {
           mapStyle="mapbox://styles/exrlandings/clvn3srf1003l01pfcy7j0c4p"
         >
           <Marker longitude="-73.9546035" latitude="40.6144579" anchor="bottom">
-            <img src={mapLogo} alt="" />
+            <img style={{width: "80px"}} src={mapLogo} alt="" />
           </Marker>  
           {
             showPopup && 

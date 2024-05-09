@@ -20,6 +20,9 @@
             @include responsive(sm){
                 flex-wrap: wrap;
             }
+            @include responsive(xs){
+                justify-content: center;
+            }
 
             .logo-wrap{
 
@@ -50,6 +53,7 @@
                     order: 3;
                 }
                 @include responsive(xs){
+                    gap: 40px;
                     flex-direction: column;
                     align-items: center;
                 }
@@ -66,6 +70,7 @@
                     }
                     @include responsive(xs){
                         align-items: center;
+                        gap: 10px;
                     }
                     
                     .heading{
@@ -103,6 +108,7 @@
                     }
                     @include responsive(xs){
                         text-align: center;
+                        gap: 10px;
                     }
 
                     .heading{
@@ -155,6 +161,10 @@
                     order: 2;    
                     flex-direction: row;
                 }
+                @include responsive(xs){
+                    order: 3;  
+                    margin-top: 50px;  
+                }
 
                 .logo-wrap{
                     width: 70px;
@@ -194,10 +204,12 @@
                 p{
                     font-size: 16px;
                     font-family: 'Charlevoix Pro';
-                    // font-weight: 300;
 
                     @include responsive(sm){
                         font-size: 14px;
+                    }
+                    @include responsive(xs){
+                        text-align: center;
                     }
                 }
             }
@@ -209,6 +221,9 @@
 
                 @include responsive(sm){
                     order: 0;
+                }
+                @include responsive(xs){
+                    justify-content: center;
                 }
 
                 .link{
